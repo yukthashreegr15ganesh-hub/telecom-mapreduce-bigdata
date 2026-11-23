@@ -2,8 +2,13 @@
 
 [![Hadoop](https://img.shields.io/badge/Apache%20Hadoop-3.4.0-red.svg)](https://hadoop.apache.org/)
 [![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.12-blue.svg)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-FF4B4B.svg)](https://streamlit.io/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://telecom-mapreduce-bigdata-bwpsylums7mgnz4yngwact.streamlit.app/)
+[![Firebase Hosting](https://img.shields.io/badge/Firebase-Landing%20Page-orange.svg?logo=firebase)](https://telecom-bigdata-analytics.web.app)
 [![License: ODbL](https://img.shields.io/badge/License-ODbL%20v1.0-green.svg)](https://opendatacommons.org/licenses/odbl/)
+
+> 🚀 **Live Deployments:**
+> - **Interactive Streamlit Dashboard:** [telecom-mapreduce-bigdata-bwpsylums7mgnz4yngwact.streamlit.app](https://telecom-mapreduce-bigdata-bwpsylums7mgnz4yngwact.streamlit.app/)
+> - **Project Showcase Landing Page:** [telecom-bigdata-analytics.web.app](https://telecom-bigdata-analytics.web.app)
 
 An end-to-end, reproducible Big Data Engineering and Distributed Systems project designed to process, aggregate, profile, and monitor large-scale telecommunication Call Detail Records (CDRs) using **Apache Hadoop MapReduce** and **HDFS**.
 
