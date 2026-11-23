@@ -1,0 +1,1997 @@
+{
+  "metadata": {
+    "project": "Large-Scale Telecommunication Data Processing and Performance Monitoring Using MapReduce",
+    "source": "MapReduce Output /telecom/output/mapreduce/part-00000",
+    "timestamp": "2026-11-23T18:13:37.341155+00:00",
+    "total_records_profiled": 4842625
+  },
+  "executive_traffic_totals": {
+    "total_network_traffic": 95727626.19,
+    "total_internet_traffic": 82479246.58,
+    "internet_traffic_percentage": 86.16,
+    "sms_metrics": {
+      "inbound_sms": 4606387.33,
+      "outbound_sms": 2822430.08,
+      "total_sms": 7428817.42,
+      "inbound_to_outbound_ratio": 1.6321
+    },
+    "call_metrics": {
+      "inbound_calls": 2622799.88,
+      "outbound_calls": 3196762.31,
+      "total_calls": 5819562.19,
+      "inbound_to_outbound_ratio": 0.8205
+    }
+  },
+  "traffic_concentration": {
+    "gini_coefficient": 0.5952,
+    "top_1_percent_cells_share_pct": 9.81,
+    "top_5_percent_cells_share_pct": 30.39,
+    "top_10_percent_cells_share_pct": 45.57,
+    "pareto_top_20_percent_cells_share_pct": 63.11,
+    "interpretation": "High spatial concentration: top 20% of cells handle 63.11% of metropolitan traffic (Gini: 0.5952)."
+  },
+  "extreme_traffic_intervals": {
+    "peak_interval": {
+      "timestamp": 1383300600000,
+      "time_utc": "2013-11-01T10:10:00+00:00",
+      "total_traffic": 868986.91,
+      "internet_traffic": 695861.52,
+      "records": 42074
+    },
+    "lowest_interval": {
+      "timestamp": 1383280800000,
+      "time_utc": "2013-11-01T04:40:00+00:00",
+      "total_traffic": 348265.95,
+      "internet_traffic": 335043.83,
+      "records": 20802
+    }
+  },
+  "top_20_cells_by_total_traffic": [
+    {
+      "rank": 1,
+      "cell_id": 5161,
+      "total_traffic": 274800.3,
+      "internet": 237230.39,
+      "sms_total": 22111.86,
+      "calls_total": 15458.05,
+      "record_count": 2307
+    },
+    {
+      "rank": 2,
+      "cell_id": 5059,
+      "total_traffic": 197968.34,
+      "internet": 160148.77,
+      "sms_total": 22296.94,
+      "calls_total": 15522.64,
+      "record_count": 1806
+    },
+    {
+      "rank": 3,
+      "cell_id": 5758,
+      "total_traffic": 143489.27,
+      "internet": 127441.03,
+      "sms_total": 9492.28,
+      "calls_total": 6555.95,
+      "record_count": 1104
+    },
+    {
+      "rank": 4,
+      "cell_id": 5061,
+      "total_traffic": 137435.48,
+      "internet": 118359.25,
+      "sms_total": 11429.93,
+      "calls_total": 7646.3,
+      "record_count": 1785
+    },
+    {
+      "rank": 5,
+      "cell_id": 5955,
+      "total_traffic": 135844.95,
+      "internet": 120642.44,
+      "sms_total": 7254.4,
+      "calls_total": 7948.11,
+      "record_count": 781
+    },
+    {
+      "rank": 6,
+      "cell_id": 5262,
+      "total_traffic": 131322.88,
+      "internet": 110195.11,
+      "sms_total": 13093.93,
+      "calls_total": 8033.84,
+      "record_count": 1693
+    },
+    {
+      "rank": 7,
+      "cell_id": 6064,
+      "total_traffic": 126818.9,
+      "internet": 101156.31,
+      "sms_total": 15016.42,
+      "calls_total": 10646.17,
+      "record_count": 2377
+    },
+    {
+      "rank": 8,
+      "cell_id": 5162,
+      "total_traffic": 124664.33,
+      "internet": 105435.15,
+      "sms_total": 11977.47,
+      "calls_total": 7251.71,
+      "record_count": 1854
+    },
+    {
+      "rank": 9,
+      "cell_id": 4857,
+      "total_traffic": 121991.81,
+      "internet": 108183.84,
+      "sms_total": 8057.26,
+      "calls_total": 5750.71,
+      "record_count": 1175
+    },
+    {
+      "rank": 10,
+      "cell_id": 4856,
+      "total_traffic": 114005.33,
+      "internet": 100265.9,
+      "sms_total": 7933.31,
+      "calls_total": 5806.12,
+      "record_count": 1119
+    },
+    {
+      "rank": 11,
+      "cell_id": 5458,
+      "total_traffic": 113380.82,
+      "internet": 102422.34,
+      "sms_total": 6232.3,
+      "calls_total": 4726.18,
+      "record_count": 1207
+    },
+    {
+      "rank": 12,
+      "cell_id": 4755,
+      "total_traffic": 112272.01,
+      "internet": 102314.14,
+      "sms_total": 5701.89,
+      "calls_total": 4255.97,
+      "record_count": 1267
+    },
+    {
+      "rank": 13,
+      "cell_id": 4654,
+      "total_traffic": 111520.13,
+      "internet": 100311.36,
+      "sms_total": 6151.32,
+      "calls_total": 5057.45,
+      "record_count": 742
+    },
+    {
+      "rank": 14,
+      "cell_id": 6073,
+      "total_traffic": 110620.42,
+      "internet": 95786.08,
+      "sms_total": 7984.2,
+      "calls_total": 6850.13,
+      "record_count": 1108
+    },
+    {
+      "rank": 15,
+      "cell_id": 5956,
+      "total_traffic": 109792.75,
+      "internet": 96991.03,
+      "sms_total": 6364.96,
+      "calls_total": 6436.76,
+      "record_count": 992
+    },
+    {
+      "rank": 16,
+      "cell_id": 5658,
+      "total_traffic": 107140.19,
+      "internet": 94957.02,
+      "sms_total": 7223.34,
+      "calls_total": 4959.83,
+      "record_count": 1095
+    },
+    {
+      "rank": 17,
+      "cell_id": 6072,
+      "total_traffic": 106965.6,
+      "internet": 86505.7,
+      "sms_total": 10299.03,
+      "calls_total": 10160.86,
+      "record_count": 715
+    },
+    {
+      "rank": 18,
+      "cell_id": 5855,
+      "total_traffic": 106165.84,
+      "internet": 92670.31,
+      "sms_total": 6493.45,
+      "calls_total": 7002.09,
+      "record_count": 646
+    },
+    {
+      "rank": 19,
+      "cell_id": 5857,
+      "total_traffic": 106148.45,
+      "internet": 95956.4,
+      "sms_total": 5333.86,
+      "calls_total": 4858.19,
+      "record_count": 886
+    },
+    {
+      "rank": 20,
+      "cell_id": 5567,
+      "total_traffic": 105790.09,
+      "internet": 94077.96,
+      "sms_total": 6716.2,
+      "calls_total": 4995.93,
+      "record_count": 882
+    }
+  ],
+  "top_20_cells_by_internet_traffic": [
+    {
+      "rank": 1,
+      "cell_id": 5161,
+      "internet_traffic": 237230.39,
+      "total_traffic": 274800.3,
+      "record_count": 2307
+    },
+    {
+      "rank": 2,
+      "cell_id": 5059,
+      "internet_traffic": 160148.77,
+      "total_traffic": 197968.34,
+      "record_count": 1806
+    },
+    {
+      "rank": 3,
+      "cell_id": 5758,
+      "internet_traffic": 127441.03,
+      "total_traffic": 143489.27,
+      "record_count": 1104
+    },
+    {
+      "rank": 4,
+      "cell_id": 5955,
+      "internet_traffic": 120642.44,
+      "total_traffic": 135844.95,
+      "record_count": 781
+    },
+    {
+      "rank": 5,
+      "cell_id": 5061,
+      "internet_traffic": 118359.25,
+      "total_traffic": 137435.48,
+      "record_count": 1785
+    },
+    {
+      "rank": 6,
+      "cell_id": 5262,
+      "internet_traffic": 110195.11,
+      "total_traffic": 131322.88,
+      "record_count": 1693
+    },
+    {
+      "rank": 7,
+      "cell_id": 4857,
+      "internet_traffic": 108183.84,
+      "total_traffic": 121991.81,
+      "record_count": 1175
+    },
+    {
+      "rank": 8,
+      "cell_id": 5162,
+      "internet_traffic": 105435.15,
+      "total_traffic": 124664.33,
+      "record_count": 1854
+    },
+    {
+      "rank": 9,
+      "cell_id": 5458,
+      "internet_traffic": 102422.34,
+      "total_traffic": 113380.82,
+      "record_count": 1207
+    },
+    {
+      "rank": 10,
+      "cell_id": 4755,
+      "internet_traffic": 102314.14,
+      "total_traffic": 112272.01,
+      "record_count": 1267
+    },
+    {
+      "rank": 11,
+      "cell_id": 6064,
+      "internet_traffic": 101156.31,
+      "total_traffic": 126818.9,
+      "record_count": 2377
+    },
+    {
+      "rank": 12,
+      "cell_id": 4654,
+      "internet_traffic": 100311.36,
+      "total_traffic": 111520.13,
+      "record_count": 742
+    },
+    {
+      "rank": 13,
+      "cell_id": 4856,
+      "internet_traffic": 100265.9,
+      "total_traffic": 114005.33,
+      "record_count": 1119
+    },
+    {
+      "rank": 14,
+      "cell_id": 5956,
+      "internet_traffic": 96991.03,
+      "total_traffic": 109792.75,
+      "record_count": 992
+    },
+    {
+      "rank": 15,
+      "cell_id": 5857,
+      "internet_traffic": 95956.4,
+      "total_traffic": 106148.45,
+      "record_count": 886
+    },
+    {
+      "rank": 16,
+      "cell_id": 6073,
+      "internet_traffic": 95786.08,
+      "total_traffic": 110620.42,
+      "record_count": 1108
+    },
+    {
+      "rank": 17,
+      "cell_id": 5658,
+      "internet_traffic": 94957.02,
+      "total_traffic": 107140.19,
+      "record_count": 1095
+    },
+    {
+      "rank": 18,
+      "cell_id": 5567,
+      "internet_traffic": 94077.96,
+      "total_traffic": 105790.09,
+      "record_count": 882
+    },
+    {
+      "rank": 19,
+      "cell_id": 5855,
+      "internet_traffic": 92670.31,
+      "total_traffic": 106165.84,
+      "record_count": 646
+    },
+    {
+      "rank": 20,
+      "cell_id": 4655,
+      "internet_traffic": 91705.53,
+      "total_traffic": 102825.76,
+      "record_count": 1267
+    }
+  ],
+  "top_20_countries_by_traffic": [
+    {
+      "rank": 1,
+      "country_code": 39,
+      "total_traffic": 93345910.44,
+      "internet": 82245208.44,
+      "sms": 5577979.91,
+      "calls": 5522722.09,
+      "record_count": 1439981
+    },
+    {
+      "rank": 2,
+      "country_code": 0,
+      "total_traffic": 1699167.78,
+      "internet": 20.74,
+      "sms": 1618103.79,
+      "calls": 81043.25,
+      "record_count": 1159632
+    },
+    {
+      "rank": 3,
+      "country_code": 33,
+      "total_traffic": 77935.6,
+      "internet": 36769.93,
+      "sms": 33653.32,
+      "calls": 7512.35,
+      "record_count": 210334
+    },
+    {
+      "rank": 4,
+      "country_code": 44,
+      "total_traffic": 53412.97,
+      "internet": 23588.13,
+      "sms": 23113.68,
+      "calls": 6711.16,
+      "record_count": 117362
+    },
+    {
+      "rank": 5,
+      "country_code": 41,
+      "total_traffic": 51396.83,
+      "internet": 22947.62,
+      "sms": 19662.98,
+      "calls": 8786.24,
+      "record_count": 145551
+    },
+    {
+      "rank": 6,
+      "country_code": 20,
+      "total_traffic": 51309.36,
+      "internet": 6.28,
+      "sms": 9910.17,
+      "calls": 41392.91,
+      "record_count": 155336
+    },
+    {
+      "rank": 7,
+      "country_code": 49,
+      "total_traffic": 39391.21,
+      "internet": 23737.95,
+      "sms": 12296.82,
+      "calls": 3356.44,
+      "record_count": 165341
+    },
+    {
+      "rank": 8,
+      "country_code": 46,
+      "total_traffic": 34401.05,
+      "internet": 27262.31,
+      "sms": 5447.0,
+      "calls": 1691.74,
+      "record_count": 208713
+    },
+    {
+      "rank": 9,
+      "country_code": 7,
+      "total_traffic": 26995.78,
+      "internet": 5509.76,
+      "sms": 15092.27,
+      "calls": 6393.75,
+      "record_count": 41017
+    },
+    {
+      "rank": 10,
+      "country_code": 1,
+      "total_traffic": 26481.32,
+      "internet": 13061.7,
+      "sms": 10353.6,
+      "calls": 3066.02,
+      "record_count": 63720
+    },
+    {
+      "rank": 11,
+      "country_code": 86,
+      "total_traffic": 24085.57,
+      "internet": 3241.19,
+      "sms": 8303.9,
+      "calls": 12540.48,
+      "record_count": 68217
+    },
+    {
+      "rank": 12,
+      "country_code": 34,
+      "total_traffic": 18963.08,
+      "internet": 11389.1,
+      "sms": 3730.07,
+      "calls": 3843.91,
+      "record_count": 50156
+    },
+    {
+      "rank": 13,
+      "country_code": 32,
+      "total_traffic": 18637.89,
+      "internet": 10598.58,
+      "sms": 7041.84,
+      "calls": 997.48,
+      "record_count": 61317
+    },
+    {
+      "rank": 14,
+      "country_code": 880,
+      "total_traffic": 18441.92,
+      "internet": 0.0,
+      "sms": 962.43,
+      "calls": 17479.49,
+      "record_count": 49435
+    },
+    {
+      "rank": 15,
+      "country_code": 40,
+      "total_traffic": 17523.02,
+      "internet": 2333.87,
+      "sms": 5961.97,
+      "calls": 9227.18,
+      "record_count": 98367
+    },
+    {
+      "rank": 16,
+      "country_code": 380,
+      "total_traffic": 17251.67,
+      "internet": 34.56,
+      "sms": 2524.57,
+      "calls": 14692.54,
+      "record_count": 82571
+    },
+    {
+      "rank": 17,
+      "country_code": 63,
+      "total_traffic": 16420.58,
+      "internet": 21.99,
+      "sms": 7387.68,
+      "calls": 9010.91,
+      "record_count": 50653
+    },
+    {
+      "rank": 18,
+      "country_code": 48,
+      "total_traffic": 11592.06,
+      "internet": 3879.93,
+      "sms": 5674.08,
+      "calls": 2038.05,
+      "record_count": 53514
+    },
+    {
+      "rank": 19,
+      "country_code": 420,
+      "total_traffic": 10812.06,
+      "internet": 5488.89,
+      "sms": 4045.93,
+      "calls": 1277.24,
+      "record_count": 21118
+    },
+    {
+      "rank": 20,
+      "country_code": 94,
+      "total_traffic": 10121.14,
+      "internet": 0.0,
+      "sms": 2533.24,
+      "calls": 7587.9,
+      "record_count": 39793
+    }
+  ],
+  "temporal_distribution": [
+    {
+      "slot_index": 0,
+      "timestamp": 1383260400000,
+      "time_utc": "2013-10-31T23:00:00+00:00",
+      "total_traffic": 710841.05,
+      "internet": 642388.34,
+      "sms": 46973.75,
+      "calls": 21478.96,
+      "record_count": 29098
+    },
+    {
+      "slot_index": 1,
+      "timestamp": 1383261000000,
+      "time_utc": "2013-10-31T23:10:00+00:00",
+      "total_traffic": 689606.9,
+      "internet": 630005.15,
+      "sms": 40717.49,
+      "calls": 18884.27,
+      "record_count": 27619
+    },
+    {
+      "slot_index": 2,
+      "timestamp": 1383261600000,
+      "time_utc": "2013-10-31T23:20:00+00:00",
+      "total_traffic": 673841.23,
+      "internet": 619933.18,
+      "sms": 36759.95,
+      "calls": 17148.09,
+      "record_count": 26114
+    },
+    {
+      "slot_index": 3,
+      "timestamp": 1383262200000,
+      "time_utc": "2013-10-31T23:30:00+00:00",
+      "total_traffic": 641464.17,
+      "internet": 590963.04,
+      "sms": 34753.42,
+      "calls": 15747.71,
+      "record_count": 24602
+    },
+    {
+      "slot_index": 4,
+      "timestamp": 1383262800000,
+      "time_utc": "2013-10-31T23:40:00+00:00",
+      "total_traffic": 623366.12,
+      "internet": 577130.08,
+      "sms": 31591.57,
+      "calls": 14644.47,
+      "record_count": 24372
+    },
+    {
+      "slot_index": 5,
+      "timestamp": 1383263400000,
+      "time_utc": "2013-10-31T23:50:00+00:00",
+      "total_traffic": 607819.36,
+      "internet": 563293.45,
+      "sms": 31192.26,
+      "calls": 13333.65,
+      "record_count": 24596
+    },
+    {
+      "slot_index": 6,
+      "timestamp": 1383264000000,
+      "time_utc": "2013-11-01T00:00:00+00:00",
+      "total_traffic": 585689.5,
+      "internet": 543777.68,
+      "sms": 29305.96,
+      "calls": 12605.85,
+      "record_count": 24970
+    },
+    {
+      "slot_index": 7,
+      "timestamp": 1383264600000,
+      "time_utc": "2013-11-01T00:10:00+00:00",
+      "total_traffic": 571490.8,
+      "internet": 532706.0,
+      "sms": 28160.54,
+      "calls": 10624.26,
+      "record_count": 23447
+    },
+    {
+      "slot_index": 8,
+      "timestamp": 1383265200000,
+      "time_utc": "2013-11-01T00:20:00+00:00",
+      "total_traffic": 551137.93,
+      "internet": 514802.05,
+      "sms": 26104.38,
+      "calls": 10231.51,
+      "record_count": 21486
+    },
+    {
+      "slot_index": 9,
+      "timestamp": 1383265800000,
+      "time_utc": "2013-11-01T00:30:00+00:00",
+      "total_traffic": 545730.15,
+      "internet": 511871.6,
+      "sms": 24104.47,
+      "calls": 9754.08,
+      "record_count": 22658
+    },
+    {
+      "slot_index": 10,
+      "timestamp": 1383266400000,
+      "time_utc": "2013-11-01T00:40:00+00:00",
+      "total_traffic": 535690.93,
+      "internet": 504164.84,
+      "sms": 22592.27,
+      "calls": 8933.82,
+      "record_count": 22044
+    },
+    {
+      "slot_index": 11,
+      "timestamp": 1383267000000,
+      "time_utc": "2013-11-01T00:50:00+00:00",
+      "total_traffic": 510009.98,
+      "internet": 480130.0,
+      "sms": 20947.31,
+      "calls": 8932.66,
+      "record_count": 20682
+    },
+    {
+      "slot_index": 12,
+      "timestamp": 1383267600000,
+      "time_utc": "2013-11-01T01:00:00+00:00",
+      "total_traffic": 498543.25,
+      "internet": 470033.42,
+      "sms": 20397.5,
+      "calls": 8112.33,
+      "record_count": 20128
+    },
+    {
+      "slot_index": 13,
+      "timestamp": 1383268200000,
+      "time_utc": "2013-11-01T01:10:00+00:00",
+      "total_traffic": 489817.75,
+      "internet": 463203.65,
+      "sms": 18885.67,
+      "calls": 7728.43,
+      "record_count": 20553
+    },
+    {
+      "slot_index": 14,
+      "timestamp": 1383268800000,
+      "time_utc": "2013-11-01T01:20:00+00:00",
+      "total_traffic": 474246.67,
+      "internet": 448566.83,
+      "sms": 18355.6,
+      "calls": 7324.24,
+      "record_count": 20216
+    },
+    {
+      "slot_index": 15,
+      "timestamp": 1383269400000,
+      "time_utc": "2013-11-01T01:30:00+00:00",
+      "total_traffic": 464716.74,
+      "internet": 439934.71,
+      "sms": 17915.65,
+      "calls": 6866.38,
+      "record_count": 19158
+    },
+    {
+      "slot_index": 16,
+      "timestamp": 1383270000000,
+      "time_utc": "2013-11-01T01:40:00+00:00",
+      "total_traffic": 453493.72,
+      "internet": 429164.91,
+      "sms": 17657.57,
+      "calls": 6671.23,
+      "record_count": 19715
+    },
+    {
+      "slot_index": 17,
+      "timestamp": 1383270600000,
+      "time_utc": "2013-11-01T01:50:00+00:00",
+      "total_traffic": 441062.38,
+      "internet": 417919.16,
+      "sms": 16655.84,
+      "calls": 6487.38,
+      "record_count": 19251
+    },
+    {
+      "slot_index": 18,
+      "timestamp": 1383271200000,
+      "time_utc": "2013-11-01T02:00:00+00:00",
+      "total_traffic": 432156.42,
+      "internet": 410022.14,
+      "sms": 15836.49,
+      "calls": 6297.79,
+      "record_count": 18490
+    },
+    {
+      "slot_index": 19,
+      "timestamp": 1383271800000,
+      "time_utc": "2013-11-01T02:10:00+00:00",
+      "total_traffic": 429755.31,
+      "internet": 408882.52,
+      "sms": 15058.52,
+      "calls": 5814.26,
+      "record_count": 19231
+    },
+    {
+      "slot_index": 20,
+      "timestamp": 1383272400000,
+      "time_utc": "2013-11-01T02:20:00+00:00",
+      "total_traffic": 413950.88,
+      "internet": 393670.48,
+      "sms": 14638.83,
+      "calls": 5641.57,
+      "record_count": 19162
+    },
+    {
+      "slot_index": 21,
+      "timestamp": 1383273000000,
+      "time_utc": "2013-11-01T02:30:00+00:00",
+      "total_traffic": 407604.5,
+      "internet": 387083.64,
+      "sms": 15154.08,
+      "calls": 5366.78,
+      "record_count": 19952
+    },
+    {
+      "slot_index": 22,
+      "timestamp": 1383273600000,
+      "time_utc": "2013-11-01T02:40:00+00:00",
+      "total_traffic": 410584.47,
+      "internet": 391486.86,
+      "sms": 14173.52,
+      "calls": 4924.09,
+      "record_count": 19358
+    },
+    {
+      "slot_index": 23,
+      "timestamp": 1383274200000,
+      "time_utc": "2013-11-01T02:50:00+00:00",
+      "total_traffic": 394181.93,
+      "internet": 374927.9,
+      "sms": 13919.69,
+      "calls": 5334.34,
+      "record_count": 19137
+    },
+    {
+      "slot_index": 24,
+      "timestamp": 1383274800000,
+      "time_utc": "2013-11-01T03:00:00+00:00",
+      "total_traffic": 393136.44,
+      "internet": 374774.88,
+      "sms": 13110.49,
+      "calls": 5251.08,
+      "record_count": 19697
+    },
+    {
+      "slot_index": 25,
+      "timestamp": 1383275400000,
+      "time_utc": "2013-11-01T03:10:00+00:00",
+      "total_traffic": 387324.15,
+      "internet": 370093.94,
+      "sms": 12416.62,
+      "calls": 4813.59,
+      "record_count": 19127
+    },
+    {
+      "slot_index": 26,
+      "timestamp": 1383276000000,
+      "time_utc": "2013-11-01T03:20:00+00:00",
+      "total_traffic": 375527.99,
+      "internet": 359437.03,
+      "sms": 11692.2,
+      "calls": 4398.76,
+      "record_count": 18889
+    },
+    {
+      "slot_index": 27,
+      "timestamp": 1383276600000,
+      "time_utc": "2013-11-01T03:30:00+00:00",
+      "total_traffic": 369346.37,
+      "internet": 354580.38,
+      "sms": 10711.62,
+      "calls": 4054.37,
+      "record_count": 19075
+    },
+    {
+      "slot_index": 28,
+      "timestamp": 1383277200000,
+      "time_utc": "2013-11-01T03:40:00+00:00",
+      "total_traffic": 369135.44,
+      "internet": 354221.99,
+      "sms": 10826.78,
+      "calls": 4086.67,
+      "record_count": 19493
+    },
+    {
+      "slot_index": 29,
+      "timestamp": 1383277800000,
+      "time_utc": "2013-11-01T03:50:00+00:00",
+      "total_traffic": 359187.2,
+      "internet": 345020.81,
+      "sms": 10310.72,
+      "calls": 3855.67,
+      "record_count": 18762
+    },
+    {
+      "slot_index": 30,
+      "timestamp": 1383278400000,
+      "time_utc": "2013-11-01T04:00:00+00:00",
+      "total_traffic": 355792.06,
+      "internet": 340967.93,
+      "sms": 10205.81,
+      "calls": 4618.31,
+      "record_count": 20597
+    },
+    {
+      "slot_index": 31,
+      "timestamp": 1383279000000,
+      "time_utc": "2013-11-01T04:10:00+00:00",
+      "total_traffic": 354428.88,
+      "internet": 339946.73,
+      "sms": 10104.05,
+      "calls": 4378.11,
+      "record_count": 20264
+    },
+    {
+      "slot_index": 32,
+      "timestamp": 1383279600000,
+      "time_utc": "2013-11-01T04:20:00+00:00",
+      "total_traffic": 348649.01,
+      "internet": 334975.38,
+      "sms": 9680.35,
+      "calls": 3993.28,
+      "record_count": 19788
+    },
+    {
+      "slot_index": 33,
+      "timestamp": 1383280200000,
+      "time_utc": "2013-11-01T04:30:00+00:00",
+      "total_traffic": 352055.67,
+      "internet": 338816.32,
+      "sms": 9217.26,
+      "calls": 4022.09,
+      "record_count": 19229
+    },
+    {
+      "slot_index": 34,
+      "timestamp": 1383280800000,
+      "time_utc": "2013-11-01T04:40:00+00:00",
+      "total_traffic": 348265.95,
+      "internet": 335043.83,
+      "sms": 9498.82,
+      "calls": 3723.3,
+      "record_count": 20802
+    },
+    {
+      "slot_index": 35,
+      "timestamp": 1383281400000,
+      "time_utc": "2013-11-01T04:50:00+00:00",
+      "total_traffic": 350597.07,
+      "internet": 336891.09,
+      "sms": 10102.24,
+      "calls": 3603.74,
+      "record_count": 19964
+    },
+    {
+      "slot_index": 36,
+      "timestamp": 1383282000000,
+      "time_utc": "2013-11-01T05:00:00+00:00",
+      "total_traffic": 354119.15,
+      "internet": 338870.29,
+      "sms": 10273.53,
+      "calls": 4975.33,
+      "record_count": 20550
+    },
+    {
+      "slot_index": 37,
+      "timestamp": 1383282600000,
+      "time_utc": "2013-11-01T05:10:00+00:00",
+      "total_traffic": 355162.88,
+      "internet": 339728.31,
+      "sms": 11114.56,
+      "calls": 4320.01,
+      "record_count": 20145
+    },
+    {
+      "slot_index": 38,
+      "timestamp": 1383283200000,
+      "time_utc": "2013-11-01T05:20:00+00:00",
+      "total_traffic": 352585.0,
+      "internet": 337031.49,
+      "sms": 10990.84,
+      "calls": 4562.66,
+      "record_count": 21628
+    },
+    {
+      "slot_index": 39,
+      "timestamp": 1383283800000,
+      "time_utc": "2013-11-01T05:30:00+00:00",
+      "total_traffic": 362465.43,
+      "internet": 345444.65,
+      "sms": 11947.74,
+      "calls": 5073.05,
+      "record_count": 22443
+    },
+    {
+      "slot_index": 40,
+      "timestamp": 1383284400000,
+      "time_utc": "2013-11-01T05:40:00+00:00",
+      "total_traffic": 371272.71,
+      "internet": 353409.2,
+      "sms": 12418.98,
+      "calls": 5444.53,
+      "record_count": 25152
+    },
+    {
+      "slot_index": 41,
+      "timestamp": 1383285000000,
+      "time_utc": "2013-11-01T05:50:00+00:00",
+      "total_traffic": 374588.59,
+      "internet": 354115.04,
+      "sms": 14004.0,
+      "calls": 6469.55,
+      "record_count": 24492
+    },
+    {
+      "slot_index": 42,
+      "timestamp": 1383285600000,
+      "time_utc": "2013-11-01T06:00:00+00:00",
+      "total_traffic": 389782.7,
+      "internet": 366051.17,
+      "sms": 16018.05,
+      "calls": 7713.49,
+      "record_count": 25289
+    },
+    {
+      "slot_index": 43,
+      "timestamp": 1383286200000,
+      "time_utc": "2013-11-01T06:10:00+00:00",
+      "total_traffic": 402669.56,
+      "internet": 377277.11,
+      "sms": 17268.16,
+      "calls": 8124.29,
+      "record_count": 27416
+    },
+    {
+      "slot_index": 44,
+      "timestamp": 1383286800000,
+      "time_utc": "2013-11-01T06:20:00+00:00",
+      "total_traffic": 401903.57,
+      "internet": 374478.99,
+      "sms": 18009.35,
+      "calls": 9415.23,
+      "record_count": 26566
+    },
+    {
+      "slot_index": 45,
+      "timestamp": 1383287400000,
+      "time_utc": "2013-11-01T06:30:00+00:00",
+      "total_traffic": 428079.48,
+      "internet": 397636.76,
+      "sms": 19601.92,
+      "calls": 10840.8,
+      "record_count": 27767
+    },
+    {
+      "slot_index": 46,
+      "timestamp": 1383288000000,
+      "time_utc": "2013-11-01T06:40:00+00:00",
+      "total_traffic": 441984.06,
+      "internet": 407662.17,
+      "sms": 22440.34,
+      "calls": 11881.55,
+      "record_count": 29602
+    },
+    {
+      "slot_index": 47,
+      "timestamp": 1383288600000,
+      "time_utc": "2013-11-01T06:50:00+00:00",
+      "total_traffic": 460971.17,
+      "internet": 420145.55,
+      "sms": 26461.93,
+      "calls": 14363.69,
+      "record_count": 30217
+    },
+    {
+      "slot_index": 48,
+      "timestamp": 1383289200000,
+      "time_utc": "2013-11-01T07:00:00+00:00",
+      "total_traffic": 506631.54,
+      "internet": 435718.93,
+      "sms": 52913.16,
+      "calls": 17999.45,
+      "record_count": 32962
+    },
+    {
+      "slot_index": 49,
+      "timestamp": 1383289800000,
+      "time_utc": "2013-11-01T07:10:00+00:00",
+      "total_traffic": 516025.67,
+      "internet": 442430.14,
+      "sms": 53550.61,
+      "calls": 20044.92,
+      "record_count": 35050
+    },
+    {
+      "slot_index": 50,
+      "timestamp": 1383290400000,
+      "time_utc": "2013-11-01T07:20:00+00:00",
+      "total_traffic": 537342.41,
+      "internet": 456139.31,
+      "sms": 57360.27,
+      "calls": 23842.83,
+      "record_count": 34348
+    },
+    {
+      "slot_index": 51,
+      "timestamp": 1383291000000,
+      "time_utc": "2013-11-01T07:30:00+00:00",
+      "total_traffic": 564007.86,
+      "internet": 478563.34,
+      "sms": 58666.82,
+      "calls": 26777.71,
+      "record_count": 33828
+    },
+    {
+      "slot_index": 52,
+      "timestamp": 1383291600000,
+      "time_utc": "2013-11-01T07:40:00+00:00",
+      "total_traffic": 590555.9,
+      "internet": 499985.42,
+      "sms": 57979.26,
+      "calls": 32591.21,
+      "record_count": 36427
+    },
+    {
+      "slot_index": 53,
+      "timestamp": 1383292200000,
+      "time_utc": "2013-11-01T07:50:00+00:00",
+      "total_traffic": 607974.63,
+      "internet": 509680.67,
+      "sms": 61219.04,
+      "calls": 37074.92,
+      "record_count": 37869
+    },
+    {
+      "slot_index": 54,
+      "timestamp": 1383292800000,
+      "time_utc": "2013-11-01T08:00:00+00:00",
+      "total_traffic": 642823.72,
+      "internet": 532125.99,
+      "sms": 68327.79,
+      "calls": 42369.94,
+      "record_count": 39102
+    },
+    {
+      "slot_index": 55,
+      "timestamp": 1383293400000,
+      "time_utc": "2013-11-01T08:10:00+00:00",
+      "total_traffic": 669851.41,
+      "internet": 553397.18,
+      "sms": 69821.58,
+      "calls": 46632.65,
+      "record_count": 40362
+    },
+    {
+      "slot_index": 56,
+      "timestamp": 1383294000000,
+      "time_utc": "2013-11-01T08:20:00+00:00",
+      "total_traffic": 685312.37,
+      "internet": 567851.09,
+      "sms": 65296.1,
+      "calls": 52165.17,
+      "record_count": 39338
+    },
+    {
+      "slot_index": 57,
+      "timestamp": 1383294600000,
+      "time_utc": "2013-11-01T08:30:00+00:00",
+      "total_traffic": 721477.37,
+      "internet": 592408.02,
+      "sms": 71845.02,
+      "calls": 57224.33,
+      "record_count": 40234
+    },
+    {
+      "slot_index": 58,
+      "timestamp": 1383295200000,
+      "time_utc": "2013-11-01T08:40:00+00:00",
+      "total_traffic": 736795.81,
+      "internet": 600841.49,
+      "sms": 73298.54,
+      "calls": 62655.78,
+      "record_count": 41974
+    },
+    {
+      "slot_index": 59,
+      "timestamp": 1383295800000,
+      "time_utc": "2013-11-01T08:50:00+00:00",
+      "total_traffic": 754891.49,
+      "internet": 613643.76,
+      "sms": 74188.44,
+      "calls": 67059.29,
+      "record_count": 39601
+    },
+    {
+      "slot_index": 60,
+      "timestamp": 1383296400000,
+      "time_utc": "2013-11-01T09:00:00+00:00",
+      "total_traffic": 787175.4,
+      "internet": 628119.28,
+      "sms": 87998.84,
+      "calls": 71057.27,
+      "record_count": 43059
+    },
+    {
+      "slot_index": 61,
+      "timestamp": 1383297000000,
+      "time_utc": "2013-11-01T09:10:00+00:00",
+      "total_traffic": 806250.56,
+      "internet": 647664.49,
+      "sms": 85950.52,
+      "calls": 72635.55,
+      "record_count": 44499
+    },
+    {
+      "slot_index": 62,
+      "timestamp": 1383297600000,
+      "time_utc": "2013-11-01T09:20:00+00:00",
+      "total_traffic": 825554.43,
+      "internet": 664257.49,
+      "sms": 85269.9,
+      "calls": 76027.04,
+      "record_count": 43504
+    },
+    {
+      "slot_index": 63,
+      "timestamp": 1383298200000,
+      "time_utc": "2013-11-01T09:30:00+00:00",
+      "total_traffic": 827960.25,
+      "internet": 667573.76,
+      "sms": 81098.86,
+      "calls": 79287.63,
+      "record_count": 44101
+    },
+    {
+      "slot_index": 64,
+      "timestamp": 1383298800000,
+      "time_utc": "2013-11-01T09:40:00+00:00",
+      "total_traffic": 831063.93,
+      "internet": 667086.17,
+      "sms": 82012.8,
+      "calls": 81964.97,
+      "record_count": 42424
+    },
+    {
+      "slot_index": 65,
+      "timestamp": 1383299400000,
+      "time_utc": "2013-11-01T09:50:00+00:00",
+      "total_traffic": 848994.09,
+      "internet": 681679.82,
+      "sms": 81962.19,
+      "calls": 85352.08,
+      "record_count": 43410
+    },
+    {
+      "slot_index": 66,
+      "timestamp": 1383300000000,
+      "time_utc": "2013-11-01T10:00:00+00:00",
+      "total_traffic": 863512.11,
+      "internet": 688703.4,
+      "sms": 87300.31,
+      "calls": 87508.4,
+      "record_count": 45728
+    },
+    {
+      "slot_index": 67,
+      "timestamp": 1383300600000,
+      "time_utc": "2013-11-01T10:10:00+00:00",
+      "total_traffic": 868986.91,
+      "internet": 695861.52,
+      "sms": 85503.84,
+      "calls": 87621.55,
+      "record_count": 42074
+    },
+    {
+      "slot_index": 68,
+      "timestamp": 1383301200000,
+      "time_utc": "2013-11-01T10:20:00+00:00",
+      "total_traffic": 857739.6,
+      "internet": 685428.17,
+      "sms": 85698.07,
+      "calls": 86613.35,
+      "record_count": 43791
+    },
+    {
+      "slot_index": 69,
+      "timestamp": 1383301800000,
+      "time_utc": "2013-11-01T10:30:00+00:00",
+      "total_traffic": 866990.79,
+      "internet": 697443.43,
+      "sms": 83902.15,
+      "calls": 85645.21,
+      "record_count": 43760
+    },
+    {
+      "slot_index": 70,
+      "timestamp": 1383302400000,
+      "time_utc": "2013-11-01T10:40:00+00:00",
+      "total_traffic": 867105.58,
+      "internet": 694652.59,
+      "sms": 85267.45,
+      "calls": 87185.54,
+      "record_count": 45681
+    },
+    {
+      "slot_index": 71,
+      "timestamp": 1383303000000,
+      "time_utc": "2013-11-01T10:50:00+00:00",
+      "total_traffic": 861368.67,
+      "internet": 689818.35,
+      "sms": 84197.74,
+      "calls": 87352.58,
+      "record_count": 46211
+    },
+    {
+      "slot_index": 72,
+      "timestamp": 1383303600000,
+      "time_utc": "2013-11-01T11:00:00+00:00",
+      "total_traffic": 865758.35,
+      "internet": 695098.62,
+      "sms": 84466.68,
+      "calls": 86193.06,
+      "record_count": 43103
+    },
+    {
+      "slot_index": 73,
+      "timestamp": 1383304200000,
+      "time_utc": "2013-11-01T11:10:00+00:00",
+      "total_traffic": 856806.97,
+      "internet": 690083.44,
+      "sms": 81947.88,
+      "calls": 84775.65,
+      "record_count": 43852
+    },
+    {
+      "slot_index": 74,
+      "timestamp": 1383304800000,
+      "time_utc": "2013-11-01T11:20:00+00:00",
+      "total_traffic": 847705.4,
+      "internet": 685276.62,
+      "sms": 80963.37,
+      "calls": 81465.41,
+      "record_count": 46579
+    },
+    {
+      "slot_index": 75,
+      "timestamp": 1383305400000,
+      "time_utc": "2013-11-01T11:30:00+00:00",
+      "total_traffic": 832830.3,
+      "internet": 676241.36,
+      "sms": 78441.32,
+      "calls": 78147.62,
+      "record_count": 43235
+    },
+    {
+      "slot_index": 76,
+      "timestamp": 1383306000000,
+      "time_utc": "2013-11-01T11:40:00+00:00",
+      "total_traffic": 832347.94,
+      "internet": 675232.6,
+      "sms": 83501.43,
+      "calls": 73613.91,
+      "record_count": 42185
+    },
+    {
+      "slot_index": 77,
+      "timestamp": 1383306600000,
+      "time_utc": "2013-11-01T11:50:00+00:00",
+      "total_traffic": 802994.63,
+      "internet": 658598.07,
+      "sms": 76564.95,
+      "calls": 67831.61,
+      "record_count": 42200
+    },
+    {
+      "slot_index": 78,
+      "timestamp": 1383307200000,
+      "time_utc": "2013-11-01T12:00:00+00:00",
+      "total_traffic": 789073.42,
+      "internet": 648722.62,
+      "sms": 75790.96,
+      "calls": 64559.83,
+      "record_count": 40519
+    },
+    {
+      "slot_index": 79,
+      "timestamp": 1383307800000,
+      "time_utc": "2013-11-01T12:10:00+00:00",
+      "total_traffic": 772807.17,
+      "internet": 646023.42,
+      "sms": 67505.07,
+      "calls": 59278.68,
+      "record_count": 38532
+    },
+    {
+      "slot_index": 80,
+      "timestamp": 1383308400000,
+      "time_utc": "2013-11-01T12:20:00+00:00",
+      "total_traffic": 762638.02,
+      "internet": 640501.69,
+      "sms": 65713.46,
+      "calls": 56422.88,
+      "record_count": 39035
+    },
+    {
+      "slot_index": 81,
+      "timestamp": 1383309000000,
+      "time_utc": "2013-11-01T12:30:00+00:00",
+      "total_traffic": 774355.18,
+      "internet": 653235.2,
+      "sms": 65418.41,
+      "calls": 55701.57,
+      "record_count": 39720
+    },
+    {
+      "slot_index": 82,
+      "timestamp": 1383309600000,
+      "time_utc": "2013-11-01T12:40:00+00:00",
+      "total_traffic": 776890.05,
+      "internet": 657398.99,
+      "sms": 66466.67,
+      "calls": 53024.39,
+      "record_count": 40094
+    },
+    {
+      "slot_index": 83,
+      "timestamp": 1383310200000,
+      "time_utc": "2013-11-01T12:50:00+00:00",
+      "total_traffic": 775395.1,
+      "internet": 658689.79,
+      "sms": 64665.62,
+      "calls": 52039.69,
+      "record_count": 39644
+    },
+    {
+      "slot_index": 84,
+      "timestamp": 1383310800000,
+      "time_utc": "2013-11-01T13:00:00+00:00",
+      "total_traffic": 792072.63,
+      "internet": 671259.37,
+      "sms": 65829.93,
+      "calls": 54983.33,
+      "record_count": 40731
+    },
+    {
+      "slot_index": 85,
+      "timestamp": 1383311400000,
+      "time_utc": "2013-11-01T13:10:00+00:00",
+      "total_traffic": 795550.8,
+      "internet": 673981.54,
+      "sms": 66575.87,
+      "calls": 54993.4,
+      "record_count": 39616
+    },
+    {
+      "slot_index": 86,
+      "timestamp": 1383312000000,
+      "time_utc": "2013-11-01T13:20:00+00:00",
+      "total_traffic": 789959.94,
+      "internet": 664715.79,
+      "sms": 69469.11,
+      "calls": 55775.03,
+      "record_count": 41471
+    },
+    {
+      "slot_index": 87,
+      "timestamp": 1383312600000,
+      "time_utc": "2013-11-01T13:30:00+00:00",
+      "total_traffic": 806369.83,
+      "internet": 681110.22,
+      "sms": 68774.05,
+      "calls": 56485.56,
+      "record_count": 42032
+    },
+    {
+      "slot_index": 88,
+      "timestamp": 1383313200000,
+      "time_utc": "2013-11-01T13:40:00+00:00",
+      "total_traffic": 797200.61,
+      "internet": 674308.0,
+      "sms": 66448.0,
+      "calls": 56444.61,
+      "record_count": 41853
+    },
+    {
+      "slot_index": 89,
+      "timestamp": 1383313800000,
+      "time_utc": "2013-11-01T13:50:00+00:00",
+      "total_traffic": 793176.46,
+      "internet": 670080.7,
+      "sms": 66561.63,
+      "calls": 56534.13,
+      "record_count": 41769
+    },
+    {
+      "slot_index": 90,
+      "timestamp": 1383314400000,
+      "time_utc": "2013-11-01T14:00:00+00:00",
+      "total_traffic": 805103.98,
+      "internet": 678051.5,
+      "sms": 69849.27,
+      "calls": 57203.21,
+      "record_count": 40844
+    },
+    {
+      "slot_index": 91,
+      "timestamp": 1383315000000,
+      "time_utc": "2013-11-01T14:10:00+00:00",
+      "total_traffic": 799693.68,
+      "internet": 676926.81,
+      "sms": 66392.6,
+      "calls": 56374.28,
+      "record_count": 40766
+    },
+    {
+      "slot_index": 92,
+      "timestamp": 1383315600000,
+      "time_utc": "2013-11-01T14:20:00+00:00",
+      "total_traffic": 791843.51,
+      "internet": 668315.28,
+      "sms": 65612.11,
+      "calls": 57916.13,
+      "record_count": 41265
+    },
+    {
+      "slot_index": 93,
+      "timestamp": 1383316200000,
+      "time_utc": "2013-11-01T14:30:00+00:00",
+      "total_traffic": 801474.88,
+      "internet": 676348.94,
+      "sms": 67238.92,
+      "calls": 57887.02,
+      "record_count": 41802
+    },
+    {
+      "slot_index": 94,
+      "timestamp": 1383316800000,
+      "time_utc": "2013-11-01T14:40:00+00:00",
+      "total_traffic": 807853.69,
+      "internet": 681429.79,
+      "sms": 67134.33,
+      "calls": 59289.57,
+      "record_count": 39946
+    },
+    {
+      "slot_index": 95,
+      "timestamp": 1383317400000,
+      "time_utc": "2013-11-01T14:50:00+00:00",
+      "total_traffic": 802360.63,
+      "internet": 675937.56,
+      "sms": 66869.89,
+      "calls": 59553.18,
+      "record_count": 42072
+    },
+    {
+      "slot_index": 96,
+      "timestamp": 1383318000000,
+      "time_utc": "2013-11-01T15:00:00+00:00",
+      "total_traffic": 808745.23,
+      "internet": 680267.19,
+      "sms": 66137.9,
+      "calls": 62340.14,
+      "record_count": 40656
+    },
+    {
+      "slot_index": 97,
+      "timestamp": 1383318600000,
+      "time_utc": "2013-11-01T15:10:00+00:00",
+      "total_traffic": 818497.75,
+      "internet": 686970.72,
+      "sms": 68324.19,
+      "calls": 63202.84,
+      "record_count": 39855
+    },
+    {
+      "slot_index": 98,
+      "timestamp": 1383319200000,
+      "time_utc": "2013-11-01T15:20:00+00:00",
+      "total_traffic": 816153.69,
+      "internet": 683574.33,
+      "sms": 68692.15,
+      "calls": 63887.21,
+      "record_count": 41445
+    },
+    {
+      "slot_index": 99,
+      "timestamp": 1383319800000,
+      "time_utc": "2013-11-01T15:30:00+00:00",
+      "total_traffic": 819389.8,
+      "internet": 684802.05,
+      "sms": 69121.51,
+      "calls": 65466.24,
+      "record_count": 40372
+    },
+    {
+      "slot_index": 100,
+      "timestamp": 1383320400000,
+      "time_utc": "2013-11-01T15:40:00+00:00",
+      "total_traffic": 822845.43,
+      "internet": 684636.26,
+      "sms": 71352.94,
+      "calls": 66856.24,
+      "record_count": 42764
+    },
+    {
+      "slot_index": 101,
+      "timestamp": 1383321000000,
+      "time_utc": "2013-11-01T15:50:00+00:00",
+      "total_traffic": 830379.27,
+      "internet": 687194.56,
+      "sms": 72059.7,
+      "calls": 71125.02,
+      "record_count": 41221
+    },
+    {
+      "slot_index": 102,
+      "timestamp": 1383321600000,
+      "time_utc": "2013-11-01T16:00:00+00:00",
+      "total_traffic": 846175.2,
+      "internet": 692747.91,
+      "sms": 78759.72,
+      "calls": 74667.58,
+      "record_count": 41783
+    },
+    {
+      "slot_index": 103,
+      "timestamp": 1383322200000,
+      "time_utc": "2013-11-01T16:10:00+00:00",
+      "total_traffic": 848696.49,
+      "internet": 696322.83,
+      "sms": 76847.18,
+      "calls": 75526.48,
+      "record_count": 42494
+    },
+    {
+      "slot_index": 104,
+      "timestamp": 1383322800000,
+      "time_utc": "2013-11-01T16:20:00+00:00",
+      "total_traffic": 838519.7,
+      "internet": 686088.9,
+      "sms": 76244.76,
+      "calls": 76186.05,
+      "record_count": 43814
+    },
+    {
+      "slot_index": 105,
+      "timestamp": 1383323400000,
+      "time_utc": "2013-11-01T16:30:00+00:00",
+      "total_traffic": 853990.21,
+      "internet": 696229.43,
+      "sms": 79501.87,
+      "calls": 78258.92,
+      "record_count": 43730
+    },
+    {
+      "slot_index": 106,
+      "timestamp": 1383324000000,
+      "time_utc": "2013-11-01T16:40:00+00:00",
+      "total_traffic": 863772.39,
+      "internet": 705533.73,
+      "sms": 78621.42,
+      "calls": 79617.24,
+      "record_count": 43188
+    },
+    {
+      "slot_index": 107,
+      "timestamp": 1383324600000,
+      "time_utc": "2013-11-01T16:50:00+00:00",
+      "total_traffic": 857447.5,
+      "internet": 697826.7,
+      "sms": 80147.33,
+      "calls": 79473.47,
+      "record_count": 40511
+    },
+    {
+      "slot_index": 108,
+      "timestamp": 1383325200000,
+      "time_utc": "2013-11-01T17:00:00+00:00",
+      "total_traffic": 863225.66,
+      "internet": 705594.96,
+      "sms": 80161.51,
+      "calls": 77469.18,
+      "record_count": 41786
+    },
+    {
+      "slot_index": 109,
+      "timestamp": 1383325800000,
+      "time_utc": "2013-11-01T17:10:00+00:00",
+      "total_traffic": 860159.27,
+      "internet": 703637.3,
+      "sms": 80234.39,
+      "calls": 76287.58,
+      "record_count": 44729
+    },
+    {
+      "slot_index": 110,
+      "timestamp": 1383326400000,
+      "time_utc": "2013-11-01T17:20:00+00:00",
+      "total_traffic": 842827.18,
+      "internet": 688576.78,
+      "sms": 78688.37,
+      "calls": 75562.03,
+      "record_count": 45045
+    },
+    {
+      "slot_index": 111,
+      "timestamp": 1383327000000,
+      "time_utc": "2013-11-01T17:30:00+00:00",
+      "total_traffic": 854791.57,
+      "internet": 697833.58,
+      "sms": 81565.88,
+      "calls": 75392.12,
+      "record_count": 42432
+    },
+    {
+      "slot_index": 112,
+      "timestamp": 1383327600000,
+      "time_utc": "2013-11-01T17:40:00+00:00",
+      "total_traffic": 861371.42,
+      "internet": 703582.29,
+      "sms": 81310.31,
+      "calls": 76478.82,
+      "record_count": 43822
+    },
+    {
+      "slot_index": 113,
+      "timestamp": 1383328200000,
+      "time_utc": "2013-11-01T17:50:00+00:00",
+      "total_traffic": 853284.98,
+      "internet": 699154.46,
+      "sms": 77126.82,
+      "calls": 77003.69,
+      "record_count": 42909
+    },
+    {
+      "slot_index": 114,
+      "timestamp": 1383328800000,
+      "time_utc": "2013-11-01T18:00:00+00:00",
+      "total_traffic": 849570.12,
+      "internet": 698338.72,
+      "sms": 76935.72,
+      "calls": 74295.68,
+      "record_count": 40779
+    },
+    {
+      "slot_index": 115,
+      "timestamp": 1383329400000,
+      "time_utc": "2013-11-01T18:10:00+00:00",
+      "total_traffic": 836746.24,
+      "internet": 687594.07,
+      "sms": 76348.94,
+      "calls": 72803.24,
+      "record_count": 41205
+    },
+    {
+      "slot_index": 116,
+      "timestamp": 1383330000000,
+      "time_utc": "2013-11-01T18:20:00+00:00",
+      "total_traffic": 830260.15,
+      "internet": 685171.24,
+      "sms": 75563.28,
+      "calls": 69525.62,
+      "record_count": 42403
+    },
+    {
+      "slot_index": 117,
+      "timestamp": 1383330600000,
+      "time_utc": "2013-11-01T18:30:00+00:00",
+      "total_traffic": 809176.98,
+      "internet": 673894.48,
+      "sms": 70421.28,
+      "calls": 64861.23,
+      "record_count": 39571
+    },
+    {
+      "slot_index": 118,
+      "timestamp": 1383331200000,
+      "time_utc": "2013-11-01T18:40:00+00:00",
+      "total_traffic": 798057.25,
+      "internet": 667956.99,
+      "sms": 67955.86,
+      "calls": 62144.4,
+      "record_count": 38760
+    },
+    {
+      "slot_index": 119,
+      "timestamp": 1383331800000,
+      "time_utc": "2013-11-01T18:50:00+00:00",
+      "total_traffic": 789090.93,
+      "internet": 660741.37,
+      "sms": 68408.13,
+      "calls": 59941.43,
+      "record_count": 38564
+    },
+    {
+      "slot_index": 120,
+      "timestamp": 1383332400000,
+      "time_utc": "2013-11-01T19:00:00+00:00",
+      "total_traffic": 792293.74,
+      "internet": 670197.28,
+      "sms": 65927.57,
+      "calls": 56168.9,
+      "record_count": 37634
+    },
+    {
+      "slot_index": 121,
+      "timestamp": 1383333000000,
+      "time_utc": "2013-11-01T19:10:00+00:00",
+      "total_traffic": 783617.23,
+      "internet": 665935.37,
+      "sms": 65189.45,
+      "calls": 52492.41,
+      "record_count": 40722
+    },
+    {
+      "slot_index": 122,
+      "timestamp": 1383333600000,
+      "time_utc": "2013-11-01T19:20:00+00:00",
+      "total_traffic": 777216.65,
+      "internet": 661946.66,
+      "sms": 63942.04,
+      "calls": 51327.95,
+      "record_count": 37668
+    },
+    {
+      "slot_index": 123,
+      "timestamp": 1383334200000,
+      "time_utc": "2013-11-01T19:30:00+00:00",
+      "total_traffic": 790946.64,
+      "internet": 673810.38,
+      "sms": 64786.45,
+      "calls": 52349.82,
+      "record_count": 37092
+    },
+    {
+      "slot_index": 124,
+      "timestamp": 1383334800000,
+      "time_utc": "2013-11-01T19:40:00+00:00",
+      "total_traffic": 788677.98,
+      "internet": 676032.23,
+      "sms": 63973.85,
+      "calls": 48671.89,
+      "record_count": 37885
+    },
+    {
+      "slot_index": 125,
+      "timestamp": 1383335400000,
+      "time_utc": "2013-11-01T19:50:00+00:00",
+      "total_traffic": 768003.97,
+      "internet": 662951.05,
+      "sms": 61269.43,
+      "calls": 43783.49,
+      "record_count": 36045
+    },
+    {
+      "slot_index": 126,
+      "timestamp": 1383336000000,
+      "time_utc": "2013-11-01T20:00:00+00:00",
+      "total_traffic": 764524.28,
+      "internet": 661151.09,
+      "sms": 61366.54,
+      "calls": 42006.64,
+      "record_count": 37380
+    },
+    {
+      "slot_index": 127,
+      "timestamp": 1383336600000,
+      "time_utc": "2013-11-01T20:10:00+00:00",
+      "total_traffic": 775139.43,
+      "internet": 668051.49,
+      "sms": 62614.15,
+      "calls": 44473.79,
+      "record_count": 37200
+    },
+    {
+      "slot_index": 128,
+      "timestamp": 1383337200000,
+      "time_utc": "2013-11-01T20:20:00+00:00",
+      "total_traffic": 752035.55,
+      "internet": 653555.67,
+      "sms": 60947.66,
+      "calls": 37532.22,
+      "record_count": 35911
+    },
+    {
+      "slot_index": 129,
+      "timestamp": 1383337800000,
+      "time_utc": "2013-11-01T20:30:00+00:00",
+      "total_traffic": 742488.05,
+      "internet": 648210.5,
+      "sms": 59561.69,
+      "calls": 34715.87,
+      "record_count": 34794
+    },
+    {
+      "slot_index": 130,
+      "timestamp": 1383338400000,
+      "time_utc": "2013-11-01T20:40:00+00:00",
+      "total_traffic": 747449.94,
+      "internet": 659065.15,
+      "sms": 55986.24,
+      "calls": 32398.54,
+      "record_count": 34320
+    },
+    {
+      "slot_index": 131,
+      "timestamp": 1383339000000,
+      "time_utc": "2013-11-01T20:50:00+00:00",
+      "total_traffic": 725201.42,
+      "internet": 641485.62,
+      "sms": 54951.24,
+      "calls": 28764.56,
+      "record_count": 35769
+    },
+    {
+      "slot_index": 132,
+      "timestamp": 1383339600000,
+      "time_utc": "2013-11-01T21:00:00+00:00",
+      "total_traffic": 719223.53,
+      "internet": 638802.45,
+      "sms": 53998.16,
+      "calls": 26422.92,
+      "record_count": 33549
+    },
+    {
+      "slot_index": 133,
+      "timestamp": 1383340200000,
+      "time_utc": "2013-11-01T21:10:00+00:00",
+      "total_traffic": 716182.93,
+      "internet": 641105.37,
+      "sms": 50281.63,
+      "calls": 24795.94,
+      "record_count": 31495
+    },
+    {
+      "slot_index": 134,
+      "timestamp": 1383340800000,
+      "time_utc": "2013-11-01T21:20:00+00:00",
+      "total_traffic": 695146.46,
+      "internet": 621937.84,
+      "sms": 49781.61,
+      "calls": 23427.02,
+      "record_count": 32512
+    },
+    {
+      "slot_index": 135,
+      "timestamp": 1383341400000,
+      "time_utc": "2013-11-01T21:30:00+00:00",
+      "total_traffic": 690006.1,
+      "internet": 620655.72,
+      "sms": 47820.9,
+      "calls": 21529.48,
+      "record_count": 30744
+    },
+    {
+      "slot_index": 136,
+      "timestamp": 1383342000000,
+      "time_utc": "2013-11-01T21:40:00+00:00",
+      "total_traffic": 673365.46,
+      "internet": 608968.79,
+      "sms": 45021.49,
+      "calls": 19375.17,
+      "record_count": 30605
+    },
+    {
+      "slot_index": 137,
+      "timestamp": 1383342600000,
+      "time_utc": "2013-11-01T21:50:00+00:00",
+      "total_traffic": 657680.28,
+      "internet": 595489.82,
+      "sms": 43595.51,
+      "calls": 18594.95,
+      "record_count": 32186
+    },
+    {
+      "slot_index": 138,
+      "timestamp": 1383343200000,
+      "time_utc": "2013-11-01T22:00:00+00:00",
+      "total_traffic": 664016.71,
+      "internet": 601725.44,
+      "sms": 44213.07,
+      "calls": 18078.2,
+      "record_count": 30630
+    },
+    {
+      "slot_index": 139,
+      "timestamp": 1383343800000,
+      "time_utc": "2013-11-01T22:10:00+00:00",
+      "total_traffic": 643435.76,
+      "internet": 586884.89,
+      "sms": 39930.57,
+      "calls": 16620.3,
+      "record_count": 29097
+    },
+    {
+      "slot_index": 140,
+      "timestamp": 1383344400000,
+      "time_utc": "2013-11-01T22:20:00+00:00",
+      "total_traffic": 634615.57,
+      "internet": 579620.16,
+      "sms": 39446.1,
+      "calls": 15549.31,
+      "record_count": 27965
+    },
+    {
+      "slot_index": 141,
+      "timestamp": 1383345000000,
+      "time_utc": "2013-11-01T22:30:00+00:00",
+      "total_traffic": 626375.72,
+      "internet": 574523.75,
+      "sms": 37755.64,
+      "calls": 14096.33,
+      "record_count": 29120
+    },
+    {
+      "slot_index": 142,
+      "timestamp": 1383345600000,
+      "time_utc": "2013-11-01T22:40:00+00:00",
+      "total_traffic": 602632.69,
+      "internet": 556980.97,
+      "sms": 33381.41,
+      "calls": 12270.31,
+      "record_count": 26735
+    },
+    {
+      "slot_index": 143,
+      "timestamp": 1383346200000,
+      "time_utc": "2013-11-01T22:50:00+00:00",
+      "total_traffic": 589687.35,
+      "internet": 544563.67,
+      "sms": 33434.33,
+      "calls": 11689.35,
+      "record_count": 26534
+    }
+  ]
+}

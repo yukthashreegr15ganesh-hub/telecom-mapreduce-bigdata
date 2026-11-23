@@ -1,0 +1,135 @@
+{
+  "inspection_target": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\telecom-mapreduce\\data\\sample\\sms-call-internet-mi-sample.txt",
+  "sample_size_bytes": 3602827,
+  "total_records_inspected": 50000,
+  "file_format": "Uncompressed Tab-Separated Values (TSV)",
+  "delimiter": "\\t",
+  "has_header": false,
+  "column_distribution": {
+    "8": 50000
+  },
+  "schema_verified": [
+    "cell_id",
+    "timestamp",
+    "country_code",
+    "sms_in",
+    "sms_out",
+    "call_in",
+    "call_out",
+    "internet_traffic"
+  ],
+  "inferred_data_types": {
+    "cell_id": [
+      "integer"
+    ],
+    "timestamp": [
+      "integer (epoch_millis)"
+    ],
+    "country_code": [
+      "integer"
+    ],
+    "sms_in": [
+      "null",
+      "float"
+    ],
+    "sms_out": [
+      "null",
+      "float"
+    ],
+    "call_in": [
+      "null",
+      "float"
+    ],
+    "call_out": [
+      "null",
+      "float"
+    ],
+    "internet_traffic": [
+      "null",
+      "float"
+    ]
+  },
+  "primary_key_candidate": [
+    "cell_id",
+    "timestamp",
+    "country_code"
+  ],
+  "duplicate_records_on_key": 0,
+  "temporal_profile": {
+    "min_timestamp_epoch_ms": 1383260400000,
+    "max_timestamp_epoch_ms": 1383346200000,
+    "min_datetime_utc": "2013-10-31T23:00:00",
+    "max_datetime_utc": "2013-11-01T22:50:00",
+    "dominant_time_interval_ms": 600000,
+    "dominant_time_interval_minutes": 10.0
+  },
+  "spatial_profile": {
+    "unique_cells_in_sample": 127,
+    "min_cell_id": 1,
+    "max_cell_id": 10000
+  },
+  "country_code_distribution_top_5": [
+    {
+      "country_code": 39,
+      "record_count": 18229
+    },
+    {
+      "country_code": 0,
+      "record_count": 14399
+    },
+    {
+      "country_code": 46,
+      "record_count": 3033
+    },
+    {
+      "country_code": 41,
+      "record_count": 1534
+    },
+    {
+      "country_code": 33,
+      "record_count": 1376
+    }
+  ],
+  "metrics_profiling": {
+    "sms_in": {
+      "non_null_count": 33280,
+      "null_count": 16720,
+      "null_percentage": 33.44,
+      "min": 7e-06,
+      "max": 9.907293,
+      "mean": 0.478909
+    },
+    "sms_out": {
+      "non_null_count": 18875,
+      "null_count": 31125,
+      "null_percentage": 62.25,
+      "min": 7e-06,
+      "max": 11.553983,
+      "mean": 0.500066
+    },
+    "call_in": {
+      "non_null_count": 17534,
+      "null_count": 32466,
+      "null_percentage": 64.93,
+      "min": 7e-06,
+      "max": 12.209313,
+      "mean": 0.569511
+    },
+    "call_out": {
+      "non_null_count": 24223,
+      "null_count": 25777,
+      "null_percentage": 51.55,
+      "min": 2.6e-05,
+      "max": 10.959662,
+      "mean": 0.490397
+    },
+    "internet_traffic": {
+      "non_null_count": 25796,
+      "null_count": 24204,
+      "null_percentage": 48.41,
+      "min": 0.000146,
+      "max": 240.773183,
+      "mean": 11.973541
+    }
+  }
+}

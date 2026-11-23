@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>local</value>
+        <description>Execution framework set to LocalJobRunner (in-process MapReduce engine reading/writing directly from HDFS)</description>
+    </property>
+    <property>
+        <name>mapreduce.job.maps</name>
+        <value>2</value>
+        <description>Concurrent local mapper threads</description>
+    </property>
+    <property>
+        <name>mapreduce.job.reduces</name>
+        <value>1</value>
+        <description>Concurrent local reducer tasks</description>
+    </property>
+</configuration>

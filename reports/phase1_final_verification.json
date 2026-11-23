@@ -1,0 +1,58 @@
+{
+  "report_title": "Phase 1 Final Acquisition Verification Report",
+  "generated_at_utc": "2026-11-23T17:04:59.916332",
+  "dataset_source": {
+    "title": "Telecommunications - SMS, Call, Internet - MI",
+    "repository": "Harvard Dataverse",
+    "doi": "10.7910/DVN/EGZHFV",
+    "license": "Open Database License (ODbL 1.0)",
+    "total_available_files": 62,
+    "total_original_dataset_bytes": 20804803507,
+    "total_original_dataset_gb": 19.38
+  },
+  "target_file_acquisition": {
+    "expected_filename": "sms-call-internet-mi-2013-11-01.txt",
+    "expected_filesize_bytes": 322874887,
+    "expected_filesize_mb": 307.92,
+    "expected_md5_checksum": "658c49f8e3c7910bd3bb2bafbf62cdce",
+    "download_status": "COMPLETED",
+    "part_file_exists": false,
+    "current_filename": "sms-call-internet-mi-2013-11-01.txt",
+    "current_downloaded_bytes": 322874887,
+    "current_downloaded_mb": 307.92,
+    "remaining_bytes": 0,
+    "remaining_mb": 0.0,
+    "download_progress_percentage": 100.0,
+    "md5_actual": "658c49f8e3c7910bd3bb2bafbf62cdce",
+    "md5_verified": true
+  },
+  "sample_verification": {
+    "sample_path": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\telecom-mapreduce\\data\\sample\\sms-call-internet-mi-sample.txt",
+    "sample_exists": true,
+    "sample_filesize_bytes": 3602827,
+    "sample_record_count": 50000,
+    "expected_sample_records": 50000,
+    "is_authentic_raw_slice": true,
+    "synthetic_records_count": 0,
+    "structural_format": "Uncompressed Tab-Separated Values (8 columns, no header)",
+    "schema": [
+      "cell_id",
+      "timestamp",
+      "country_code",
+      "sms_in",
+      "sms_out",
+      "call_in",
+      "call_out",
+      "internet_traffic"
+    ]
+  },
+  "remaining_download_work": {
+    "total_daily_archive_files": 62,
+    "completed_raw_files": 1,
+    "in_progress_raw_files": 0,
+    "remaining_unacquired_files": 61,
+    "remaining_unacquired_bytes": 20481928620,
+    "remaining_unacquired_gb": 19.08,
+    "automated_resumption_command": "python scripts/download_dataset.py --limit 1"
+  }
+}

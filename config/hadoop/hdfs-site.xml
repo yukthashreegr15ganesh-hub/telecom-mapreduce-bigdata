@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+        <description>Single-node block replication factor</description>
+    </property>
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>file:///var/hadoop/hdfs/namenode</value>
+        <description>Directory for NameNode metadata storage (fsimage and edits)</description>
+    </property>
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>file:///var/hadoop/hdfs/datanode</value>
+        <description>Directory for DataNode block storage</description>
+    </property>
+    <property>
+        <name>dfs.permissions.enabled</name>
+        <value>false</value>
+        <description>Disable permission checking for single-node local development</description>
+    </property>
+</configuration>

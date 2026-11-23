@@ -1,0 +1,59 @@
+{
+  "job_name": "Telecom_Traffic_Aggregation_Combined",
+  "framework": "Apache Hadoop 3.4.0 (Streaming)",
+  "execution_mode": "Single-Node LocalJobRunner against HDFS",
+  "timestamp": "2026-11-23T18:12:59.256373+00:00",
+  "execution_duration_seconds": 16.01,
+  "input_records": 4842625,
+  "reduced_output_records": 10390,
+  "throughput_records_per_sec": 302565.73,
+  "hdfs_input_path": "/telecom/data/processed/clean/sms-call-internet-mi-2013-11-01-clean.tsv",
+  "hdfs_output_path": "/telecom/output/mapreduce",
+  "exit_code": 0,
+  "job_counters": {
+    "Map input records": 4842625,
+    "Map output records": 16126,
+    "Map output bytes": 1317530,
+    "Map output materialized bytes": 1349800,
+    "Input split bytes": 432,
+    "Combine input records": 0,
+    "Spilled Records": 32252,
+    "Failed Shuffles": 0,
+    "Merged Map outputs": 3,
+    "GC time elapsed (ms)": 32,
+    "Total committed heap usage (bytes)": 964689920,
+    "Bytes Read": 317895838,
+    "Combine output records": 0,
+    "Reduce input groups": 10390,
+    "Reduce shuffle bytes": 1349800,
+    "Reduce input records": 16126,
+    "Reduce output records": 10390,
+    "Shuffled Maps": 3,
+    "BAD_ID": 0,
+    "CONNECTION": 0,
+    "IO_ERROR": 0,
+    "WRONG_LENGTH": 0,
+    "WRONG_MAP": 0,
+    "WRONG_REDUCE": 0,
+    "Bytes Written": 1526145
+  },
+  "output_verification": {
+    "hdfs_listing": [
+      "Found 2 items",
+      "-rw-r--r--   1 dminmlops supergroup          0 2026-11-23 18:12 /telecom/output/mapreduce/_SUCCESS",
+      "-rw-r--r--   1 dminmlops supergroup    1526145 2026-11-23 18:12 /telecom/output/mapreduce/part-00000"
+    ],
+    "sample_records": [
+      "CELL\t1\t346\t78.709755\t276\t0.285180\t45.886570\t151\t0.303885\t41.108567\t141\t0.291550\t48.245378\t173\t0.278875\t1507.048300\t167\t9.024241\t1720.998570",
+      "CELL\t10\t339\t59.993363\t275\t0.218158\t34.514620\t146\t0.236402\t33.234350\t137\t0.242586\t39.605324\t165\t0.240032\t912.280070\t162\t5.631358\t1079.627727",
+      "CELL\t100\t494\t55.723186\t280\t0.199011\t31.192604\t145\t0.215121\t43.786180\t172\t0.254571\t43.307697\t169\t0.256259\t2749.379600\t290\t9.480619\t2923.389267",
+      "CELL\t1000\t428\t299.652310\t269\t1.113949\t113.526380\t156\t0.727733\t189.492940\t139\t1.363259\t188.076990\t200\t0.940385\t3823.811300\t207\t18.472518\t4614.559920",
+      "CELL\t10000\t371\t166.807830\t260\t0.641569\t111.210640\t155\t0.717488\t103.116500\t135\t0.763826\t122.378060\t185\t0.661503\t3042.988200\t178\t17.095439\t3546.501230",
+      "CELL\t1001\t269\t25.971906\t230\t0.112921\t17.203070\t149\t0.115457\t15.044972\t118\t0.127500\t16.290496\t130\t0.125312\t635.594760\t154\t4.127239\t710.105204",
+      "CELL\t1002\t438\t26.629638\t293\t0.090886\t17.471631\t177\t0.098710\t15.291198\t145\t0.105457\t16.561035\t178\t0.093040\t628.417560\t232\t2.708696\t704.371062",
+      "CELL\t1003\t311\t25.312085\t241\t0.105029\t16.616184\t155\t0.107201\t14.572498\t125\t0.116580\t15.814947\t141\t0.112163\t619.031000\t180\t3.439061\t691.346714",
+      "CELL\t1004\t352\t30.178694\t261\t0.115627\t21.037386\t162\t0.129860\t18.154733\t131\t0.138586\t19.689063\t170\t0.115818\t655.138220\t191\t3.430043\t744.198096",
+      "CELL\t1005\t601\t28.793916\t337\t0.085442\t17.893619\t185\t0.096722\t15.955195\t160\t0.099720\t17.560309\t230\t0.076349\t496.413400\t330\t1.504283\t576.616439"
+    ]
+  }
+}

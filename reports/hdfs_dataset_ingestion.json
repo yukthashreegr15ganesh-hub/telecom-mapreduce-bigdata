@@ -1,0 +1,33 @@
+{
+  "project": "Large-Scale Telecommunication Data Processing and Performance Monitoring Using MapReduce",
+  "ingestion_status": "SUCCESS",
+  "timestamp": "2026-11-23T17:52:31.460381+00:00",
+  "source_metadata": {
+    "filename": "sms-call-internet-mi-2013-11-01.txt",
+    "local_path": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\telecom-mapreduce\\data\\raw\\sms-call-internet-mi-2013-11-01.txt",
+    "wsl_path": "/mnt/c/Users/Admin/.gemini/antigravity/scratch/telecom-mapreduce/data/raw/sms-call-internet-mi-2013-11-01.txt",
+    "byte_size": 322874887,
+    "md5_checksum": "658c49f8e3c7910bd3bb2bafbf62cdce",
+    "expected_md5": "658c49f8e3c7910bd3bb2bafbf62cdce",
+    "record_count": 4842625
+  },
+  "hdfs_metadata": {
+    "target_path": "/telecom/data/raw/sms-call-internet-mi-2013-11-01.txt",
+    "byte_size": 322874887,
+    "replication_factor": 1,
+    "hdfs_checksum_raw": "/telecom/data/raw/sms-call-internet-mi-2013-11-01.txt\tMD5-of-262144MD5-of-512CRC32C\t00000200000000000004000036717c3ec5380d6b5d21faf9b2adeadc",
+    "streamed_md5": "658c49f8e3c7910bd3bb2bafbf62cdce",
+    "md5_match": true,
+    "size_match": true,
+    "record_count_match": true
+  },
+  "performance_metrics": {
+    "upload_duration_seconds": 28.85,
+    "throughput_mb_per_sec": 10.67,
+    "transfer_command": "/opt/hadoop/bin/hdfs dfs -put /mnt/c/Users/Admin/.gemini/antigravity/scratch/telecom-mapreduce/data/raw/sms-call-internet-mi-2013-11-01.txt /telecom/data/raw/sms-call-internet-mi-2013-11-01.txt"
+  },
+  "storage_capacity_post_ingestion": {
+    "windows_free_gb": 8.0,
+    "wsl_free_gb": 949.58
+  }
+}

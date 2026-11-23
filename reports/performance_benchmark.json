@@ -1,0 +1,53 @@
+{
+  "benchmark_metadata": {
+    "project": "Large-Scale Telecommunication Data Processing and Performance Monitoring Using MapReduce",
+    "timestamp": "2026-11-23T18:14:33.289236+00:00",
+    "execution_environment": {
+      "os": "Ubuntu 24.04.3 LTS on WSL2 (Windows 10/11 Host)",
+      "hadoop_version": "Apache Hadoop 3.4.0",
+      "java_version": "OpenJDK 11.0.33",
+      "execution_mode": "Single-Node LocalJobRunner against HDFS (No false multi-node claims)",
+      "daemon_architecture": "Dedicated systemd background service units with user session lingering"
+    }
+  },
+  "dataset_metrics": {
+    "raw_dataset_file": "/telecom/data/raw/sms-call-internet-mi-2013-11-01.txt",
+    "raw_dataset_bytes": 322874887,
+    "raw_dataset_mb": 307.92,
+    "total_records": 4842625,
+    "clean_dataset_bytes": 317887646,
+    "clean_dataset_mb": 303.16,
+    "reduced_output_bytes": 1526145,
+    "reduced_output_mb": 1.46,
+    "reduced_keys_emitted": 10390
+  },
+  "mapreduce_performance": {
+    "job_name": "Telecom_Traffic_Aggregation_Combined",
+    "map_tasks": 1,
+    "reduce_tasks": 1,
+    "execution_duration_seconds": 16.01,
+    "records_processed_per_second": 302475.02,
+    "mb_processed_per_second": 18.94,
+    "gc_time_elapsed_ms": 32,
+    "total_committed_heap_bytes": 964689920,
+    "total_committed_heap_mb": 920.0,
+    "bytes_read": 317895838,
+    "bytes_written": 1526145,
+    "map_input_records": 4842625,
+    "map_output_records": 16126,
+    "reduce_input_groups": 10390,
+    "reduce_output_records": 10390
+  },
+  "preprocessing_pipeline_performance": {
+    "execution_duration_seconds": 80.1,
+    "records_processed_per_second": 60457.24,
+    "mb_streamed_per_second": 3.84,
+    "valid_records": 4842625,
+    "rejected_records": 0,
+    "data_loss_percentage": 0.0
+  },
+  "total_pipeline_efficiency": {
+    "end_to_end_computation_seconds": 96.11,
+    "data_reduction_ratio": "211.6:1 (From 322.87 MB raw to 1.53 MB analytical summary)"
+  }
+}

@@ -1,0 +1,642 @@
+{
+  "metadata": {
+    "project": "Large-Scale Telecommunication Data Processing and Performance Monitoring Using MapReduce",
+    "phase": "Phase 6: Network Performance Monitoring & CDR Anomaly Detection",
+    "timestamp": "2026-11-23T18:14:09.811046+00:00",
+    "methodology": "Robust Non-Parametric Median & MAD Anomaly Scoring (Modified Z-score)",
+    "disclaimer": "All detected anomalies represent empirical statistical deviations in CDR traffic volume and do not indicate confirmed physical equipment outages or network hardware failures."
+  },
+  "summary_counts": {
+    "temporal_surges_detected": 0,
+    "rate_of_change_spikes_detected": 5,
+    "cell_hotspot_anomalies_detected": 51,
+    "total_anomalies_flagged": 56
+  },
+  "baselines": {
+    "temporal_traffic": {
+      "median_per_10min_interval": 739641.93,
+      "mad_per_10min_interval": 108559.01,
+      "average_per_10min_interval": 664775.18
+    },
+    "cell_traffic": {
+      "median_per_cell": 4979.45,
+      "mad_per_cell": 3546.75,
+      "p99_5_threshold": 88418.13
+    }
+  },
+  "temporal_surge_anomalies": [],
+  "rate_of_change_spike_anomalies": [
+    {
+      "type": "RATE_OF_CHANGE_DROP",
+      "timestamp": 1383262200000,
+      "time_utc": "2013-10-31T23:30:00+00:00",
+      "observed_delta": -32377.06,
+      "prior_interval_traffic": 673841.23,
+      "current_interval_traffic": 641464.17,
+      "baseline_median_delta": 9631.37,
+      "deviation_score": 2.626,
+      "severity": "MODERATE",
+      "explanation": "Sudden interval-to-interval drop of -32,377.06 traffic volume from 2013-10-31T23:20:00+00:00 to 2013-10-31T23:30:00+00:00 (Delta Z: 2.63)."
+    },
+    {
+      "type": "RATE_OF_CHANGE_SURGE",
+      "timestamp": 1383289200000,
+      "time_utc": "2013-11-01T07:00:00+00:00",
+      "observed_delta": 45660.37,
+      "prior_interval_traffic": 460971.17,
+      "current_interval_traffic": 506631.54,
+      "baseline_median_delta": 9631.37,
+      "deviation_score": 4.16,
+      "severity": "HIGH",
+      "explanation": "Sudden interval-to-interval surge of +45,660.37 traffic volume from 2013-11-01T06:50:00+00:00 to 2013-11-01T07:00:00+00:00 (Delta Z: 4.16)."
+    },
+    {
+      "type": "RATE_OF_CHANGE_SURGE",
+      "timestamp": 1383292800000,
+      "time_utc": "2013-11-01T08:00:00+00:00",
+      "observed_delta": 34849.09,
+      "prior_interval_traffic": 607974.63,
+      "current_interval_traffic": 642823.72,
+      "baseline_median_delta": 9631.37,
+      "deviation_score": 2.912,
+      "severity": "MODERATE",
+      "explanation": "Sudden interval-to-interval surge of +34,849.09 traffic volume from 2013-11-01T07:50:00+00:00 to 2013-11-01T08:00:00+00:00 (Delta Z: 2.91)."
+    },
+    {
+      "type": "RATE_OF_CHANGE_SURGE",
+      "timestamp": 1383294600000,
+      "time_utc": "2013-11-01T08:30:00+00:00",
+      "observed_delta": 36165.0,
+      "prior_interval_traffic": 685312.37,
+      "current_interval_traffic": 721477.37,
+      "baseline_median_delta": 9631.37,
+      "deviation_score": 3.064,
+      "severity": "MODERATE",
+      "explanation": "Sudden interval-to-interval surge of +36,165.00 traffic volume from 2013-11-01T08:20:00+00:00 to 2013-11-01T08:30:00+00:00 (Delta Z: 3.06)."
+    },
+    {
+      "type": "RATE_OF_CHANGE_SURGE",
+      "timestamp": 1383296400000,
+      "time_utc": "2013-11-01T09:00:00+00:00",
+      "observed_delta": 32283.91,
+      "prior_interval_traffic": 754891.49,
+      "current_interval_traffic": 787175.4,
+      "baseline_median_delta": 9631.37,
+      "deviation_score": 2.616,
+      "severity": "MODERATE",
+      "explanation": "Sudden interval-to-interval surge of +32,283.91 traffic volume from 2013-11-01T08:50:00+00:00 to 2013-11-01T09:00:00+00:00 (Delta Z: 2.62)."
+    }
+  ],
+  "cell_hotspot_anomalies": [
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5161,
+      "observed_value": 274800.3,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 55.19,
+      "deviation_score": 51.313,
+      "internet_share_pct": 86.33,
+      "severity": "CRITICAL",
+      "explanation": "Cell 5161 generated 274,800.30 total traffic, which is 55.2x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5059,
+      "observed_value": 197968.34,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 39.76,
+      "deviation_score": 36.701,
+      "internet_share_pct": 80.9,
+      "severity": "CRITICAL",
+      "explanation": "Cell 5059 generated 197,968.34 total traffic, which is 39.8x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5758,
+      "observed_value": 143489.27,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 28.82,
+      "deviation_score": 26.341,
+      "internet_share_pct": 88.82,
+      "severity": "CRITICAL",
+      "explanation": "Cell 5758 generated 143,489.27 total traffic, which is 28.8x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5061,
+      "observed_value": 137435.48,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 27.6,
+      "deviation_score": 25.19,
+      "internet_share_pct": 86.12,
+      "severity": "CRITICAL",
+      "explanation": "Cell 5061 generated 137,435.48 total traffic, which is 27.6x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5955,
+      "observed_value": 135844.95,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 27.28,
+      "deviation_score": 24.887,
+      "internet_share_pct": 88.81,
+      "severity": "CRITICAL",
+      "explanation": "Cell 5955 generated 135,844.95 total traffic, which is 27.3x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5262,
+      "observed_value": 131322.88,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 26.37,
+      "deviation_score": 24.027,
+      "internet_share_pct": 83.91,
+      "severity": "CRITICAL",
+      "explanation": "Cell 5262 generated 131,322.88 total traffic, which is 26.4x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 6064,
+      "observed_value": 126818.9,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 25.47,
+      "deviation_score": 23.171,
+      "internet_share_pct": 79.76,
+      "severity": "CRITICAL",
+      "explanation": "Cell 6064 generated 126,818.90 total traffic, which is 25.5x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5162,
+      "observed_value": 124664.33,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 25.04,
+      "deviation_score": 22.761,
+      "internet_share_pct": 84.58,
+      "severity": "CRITICAL",
+      "explanation": "Cell 5162 generated 124,664.33 total traffic, which is 25.0x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 4857,
+      "observed_value": 121991.81,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 24.5,
+      "deviation_score": 22.253,
+      "internet_share_pct": 88.68,
+      "severity": "HIGH",
+      "explanation": "Cell 4857 generated 121,991.81 total traffic, which is 24.5x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 4856,
+      "observed_value": 114005.33,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 22.9,
+      "deviation_score": 20.734,
+      "internet_share_pct": 87.95,
+      "severity": "HIGH",
+      "explanation": "Cell 4856 generated 114,005.33 total traffic, which is 22.9x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5458,
+      "observed_value": 113380.82,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 22.77,
+      "deviation_score": 20.615,
+      "internet_share_pct": 90.33,
+      "severity": "HIGH",
+      "explanation": "Cell 5458 generated 113,380.82 total traffic, which is 22.8x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 4755,
+      "observed_value": 112272.01,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 22.55,
+      "deviation_score": 20.404,
+      "internet_share_pct": 91.13,
+      "severity": "HIGH",
+      "explanation": "Cell 4755 generated 112,272.01 total traffic, which is 22.5x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 4654,
+      "observed_value": 111520.13,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 22.4,
+      "deviation_score": 20.261,
+      "internet_share_pct": 89.95,
+      "severity": "HIGH",
+      "explanation": "Cell 4654 generated 111,520.13 total traffic, which is 22.4x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 6073,
+      "observed_value": 110620.42,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 22.22,
+      "deviation_score": 20.09,
+      "internet_share_pct": 86.59,
+      "severity": "HIGH",
+      "explanation": "Cell 6073 generated 110,620.42 total traffic, which is 22.2x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5956,
+      "observed_value": 109792.75,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 22.05,
+      "deviation_score": 19.933,
+      "internet_share_pct": 88.34,
+      "severity": "HIGH",
+      "explanation": "Cell 5956 generated 109,792.75 total traffic, which is 22.0x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5658,
+      "observed_value": 107140.19,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 21.52,
+      "deviation_score": 19.428,
+      "internet_share_pct": 88.63,
+      "severity": "HIGH",
+      "explanation": "Cell 5658 generated 107,140.19 total traffic, which is 21.5x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 6072,
+      "observed_value": 106965.6,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 21.48,
+      "deviation_score": 19.395,
+      "internet_share_pct": 80.87,
+      "severity": "HIGH",
+      "explanation": "Cell 6072 generated 106,965.60 total traffic, which is 21.5x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5855,
+      "observed_value": 106165.84,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 21.32,
+      "deviation_score": 19.243,
+      "internet_share_pct": 87.29,
+      "severity": "HIGH",
+      "explanation": "Cell 5855 generated 106,165.84 total traffic, which is 21.3x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5857,
+      "observed_value": 106148.45,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 21.32,
+      "deviation_score": 19.24,
+      "internet_share_pct": 90.4,
+      "severity": "HIGH",
+      "explanation": "Cell 5857 generated 106,148.45 total traffic, which is 21.3x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5567,
+      "observed_value": 105790.09,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 21.25,
+      "deviation_score": 19.172,
+      "internet_share_pct": 88.93,
+      "severity": "HIGH",
+      "explanation": "Cell 5567 generated 105,790.09 total traffic, which is 21.2x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 6169,
+      "observed_value": 103415.85,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 20.77,
+      "deviation_score": 18.72,
+      "internet_share_pct": 87.75,
+      "severity": "HIGH",
+      "explanation": "Cell 6169 generated 103,415.85 total traffic, which is 20.8x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 4655,
+      "observed_value": 102825.76,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 20.65,
+      "deviation_score": 18.608,
+      "internet_share_pct": 89.19,
+      "severity": "HIGH",
+      "explanation": "Cell 4655 generated 102,825.76 total traffic, which is 20.7x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5959,
+      "observed_value": 102213.37,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 20.53,
+      "deviation_score": 18.491,
+      "internet_share_pct": 88.56,
+      "severity": "HIGH",
+      "explanation": "Cell 5959 generated 102,213.37 total traffic, which is 20.5x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 4653,
+      "observed_value": 101830.74,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 20.45,
+      "deviation_score": 18.419,
+      "internet_share_pct": 89.3,
+      "severity": "HIGH",
+      "explanation": "Cell 4653 generated 101,830.74 total traffic, which is 20.5x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 4457,
+      "observed_value": 101093.47,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 20.3,
+      "deviation_score": 18.278,
+      "internet_share_pct": 90.07,
+      "severity": "HIGH",
+      "explanation": "Cell 4457 generated 101,093.47 total traffic, which is 20.3x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 4754,
+      "observed_value": 100498.13,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 20.18,
+      "deviation_score": 18.165,
+      "internet_share_pct": 90.27,
+      "severity": "HIGH",
+      "explanation": "Cell 4754 generated 100,498.13 total traffic, which is 20.2x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 4855,
+      "observed_value": 100417.76,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 20.17,
+      "deviation_score": 18.15,
+      "internet_share_pct": 87.16,
+      "severity": "HIGH",
+      "explanation": "Cell 4855 generated 100,417.76 total traffic, which is 20.2x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5258,
+      "observed_value": 100278.47,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 20.14,
+      "deviation_score": 18.123,
+      "internet_share_pct": 88.16,
+      "severity": "HIGH",
+      "explanation": "Cell 5258 generated 100,278.47 total traffic, which is 20.1x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 6165,
+      "observed_value": 100257.61,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 20.13,
+      "deviation_score": 18.119,
+      "internet_share_pct": 79.26,
+      "severity": "HIGH",
+      "explanation": "Cell 6165 generated 100,257.61 total traffic, which is 20.1x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 4456,
+      "observed_value": 100173.02,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 20.12,
+      "deviation_score": 18.103,
+      "internet_share_pct": 90.12,
+      "severity": "HIGH",
+      "explanation": "Cell 4456 generated 100,173.02 total traffic, which is 20.1x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5954,
+      "observed_value": 99716.8,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 20.03,
+      "deviation_score": 18.017,
+      "internet_share_pct": 88.64,
+      "severity": "HIGH",
+      "explanation": "Cell 5954 generated 99,716.80 total traffic, which is 20.0x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 4556,
+      "observed_value": 98140.54,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 19.71,
+      "deviation_score": 17.717,
+      "internet_share_pct": 87.15,
+      "severity": "HIGH",
+      "explanation": "Cell 4556 generated 98,140.54 total traffic, which is 19.7x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5858,
+      "observed_value": 97114.3,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 19.5,
+      "deviation_score": 17.522,
+      "internet_share_pct": 88.99,
+      "severity": "HIGH",
+      "explanation": "Cell 5858 generated 97,114.30 total traffic, which is 19.5x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5856,
+      "observed_value": 96982.11,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 19.48,
+      "deviation_score": 17.497,
+      "internet_share_pct": 90.06,
+      "severity": "HIGH",
+      "explanation": "Cell 5856 generated 96,982.11 total traffic, which is 19.5x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5958,
+      "observed_value": 95957.64,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 19.27,
+      "deviation_score": 17.302,
+      "internet_share_pct": 88.31,
+      "severity": "HIGH",
+      "explanation": "Cell 5958 generated 95,957.64 total traffic, which is 19.3x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5060,
+      "observed_value": 95509.4,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 19.18,
+      "deviation_score": 17.216,
+      "internet_share_pct": 83.56,
+      "severity": "HIGH",
+      "explanation": "Cell 5060 generated 95,509.40 total traffic, which is 19.2x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 4554,
+      "observed_value": 94423.42,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 18.96,
+      "deviation_score": 17.01,
+      "internet_share_pct": 89.39,
+      "severity": "HIGH",
+      "explanation": "Cell 4554 generated 94,423.42 total traffic, which is 19.0x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5765,
+      "observed_value": 93731.79,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 18.82,
+      "deviation_score": 16.878,
+      "internet_share_pct": 86.55,
+      "severity": "HIGH",
+      "explanation": "Cell 5765 generated 93,731.79 total traffic, which is 18.8x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5854,
+      "observed_value": 93119.41,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 18.7,
+      "deviation_score": 16.762,
+      "internet_share_pct": 87.3,
+      "severity": "HIGH",
+      "explanation": "Cell 5854 generated 93,119.41 total traffic, which is 18.7x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 4656,
+      "observed_value": 93028.11,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 18.68,
+      "deviation_score": 16.745,
+      "internet_share_pct": 87.71,
+      "severity": "HIGH",
+      "explanation": "Cell 4656 generated 93,028.11 total traffic, which is 18.7x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5967,
+      "observed_value": 92454.28,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 18.57,
+      "deviation_score": 16.635,
+      "internet_share_pct": 86.03,
+      "severity": "HIGH",
+      "explanation": "Cell 5967 generated 92,454.28 total traffic, which is 18.6x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 4756,
+      "observed_value": 92426.72,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 18.56,
+      "deviation_score": 16.63,
+      "internet_share_pct": 89.29,
+      "severity": "HIGH",
+      "explanation": "Cell 4756 generated 92,426.72 total traffic, which is 18.6x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5159,
+      "observed_value": 92329.72,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 18.54,
+      "deviation_score": 16.612,
+      "internet_share_pct": 82.87,
+      "severity": "HIGH",
+      "explanation": "Cell 5159 generated 92,329.72 total traffic, which is 18.5x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 6058,
+      "observed_value": 91634.34,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 18.4,
+      "deviation_score": 16.48,
+      "internet_share_pct": 85.44,
+      "severity": "HIGH",
+      "explanation": "Cell 6058 generated 91,634.34 total traffic, which is 18.4x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5859,
+      "observed_value": 91329.0,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 18.34,
+      "deviation_score": 16.421,
+      "internet_share_pct": 89.03,
+      "severity": "HIGH",
+      "explanation": "Cell 5859 generated 91,329.00 total traffic, which is 18.3x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5259,
+      "observed_value": 91275.54,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 18.33,
+      "deviation_score": 16.411,
+      "internet_share_pct": 92.7,
+      "severity": "HIGH",
+      "explanation": "Cell 5259 generated 91,275.54 total traffic, which is 18.3x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 4553,
+      "observed_value": 89686.82,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 18.01,
+      "deviation_score": 16.109,
+      "internet_share_pct": 88.01,
+      "severity": "HIGH",
+      "explanation": "Cell 4553 generated 89,686.82 total traffic, which is 18.0x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 4462,
+      "observed_value": 89549.1,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 17.98,
+      "deviation_score": 16.083,
+      "internet_share_pct": 89.7,
+      "severity": "HIGH",
+      "explanation": "Cell 4462 generated 89,549.10 total traffic, which is 18.0x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 4555,
+      "observed_value": 89503.77,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 17.97,
+      "deviation_score": 16.074,
+      "internet_share_pct": 88.0,
+      "severity": "HIGH",
+      "explanation": "Cell 4555 generated 89,503.77 total traffic, which is 18.0x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    },
+    {
+      "type": "CELL_TRAFFIC_HOTSPOT",
+      "cell_id": 5957,
+      "observed_value": 89414.3,
+      "baseline_median": 4979.45,
+      "ratio_to_median": 17.96,
+      "deviation_score": 16.057,
+      "internet_share_pct": 88.92,
+      "severity": "HIGH",
+      "explanation": "Cell 5957 generated 89,414.30 total traffic, which is 18.0x the metropolitan median (4,979.45). High-density commercial/transit cluster."
+    }
+  ]
+}

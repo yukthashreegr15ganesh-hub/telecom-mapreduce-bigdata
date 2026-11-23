@@ -1,0 +1,95 @@
+{
+  "operating_system": {
+    "platform": "Windows-10-10.0.26300-SP0",
+    "system": "Windows",
+    "release": "10",
+    "version": "10.0.26300",
+    "architecture": "AMD64",
+    "processor_count": 16,
+    "windows_edition_details": {
+      "ProductName": "Windows 10 Home Single Language",
+      "DisplayVersion": "26H2",
+      "CurrentBuild": "26300",
+      "ReleaseId": "2009"
+    },
+    "ram": {
+      "total_ram_bytes": 16873545728,
+      "total_ram_gb": 15.71,
+      "available_ram_bytes": 2849931264,
+      "available_ram_gb": 2.65,
+      "memory_load_percentage": 83
+    },
+    "disk_c": {
+      "drive": "C:\\",
+      "total_bytes": 300007026688,
+      "total_gb": 279.4,
+      "used_bytes": 289736069120,
+      "used_gb": 269.84,
+      "free_bytes": 10270957568,
+      "free_gb": 9.57,
+      "free_percentage": 3.42
+    },
+    "powershell_version": "5.1.26100.9818"
+  },
+  "java": {
+    "installed": true,
+    "java_version_output": "openjdk version \"25.0.4\" 2026-07-21 LTS\nOpenJDK Runtime Environment Temurin-25.0.4+7 (build 25.0.4+7-LTS)\nOpenJDK 64-Bit Server VM Temurin-25.0.4+7 (build 25.0.4+7-LTS, mixed mode, sharing)",
+    "javac_version_output": "javac 25.0.4",
+    "javac_available": true,
+    "java_home_env": "",
+    "java_binary_locations": [
+      "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.7-hotspot\\bin\\java.exe"
+    ],
+    "javac_binary_locations": [
+      "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.7-hotspot\\bin\\javac.exe"
+    ],
+    "all_installed_jdks_found": [
+      {
+        "jdk_path": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.7-hotspot",
+        "has_java": true,
+        "has_javac": true
+      }
+    ],
+    "compatibility_note": "Java 25 is currently active on PATH. Hadoop 3.x officially requires Java 8 or Java 11."
+  },
+  "hadoop": {
+    "installed": false,
+    "hadoop_home_env": "",
+    "hadoop_conf_dir_env": "",
+    "hadoop_version_output": "[WinError 2] The system cannot find the file specified",
+    "hadoop_binary_locations": [],
+    "detected_hadoop_dirs": []
+  },
+  "dependencies": {
+    "python": {
+      "available": true,
+      "version": "Python 3.10.11"
+    },
+    "git": {
+      "available": true,
+      "version": "git version 2.53.0.windows.1"
+    },
+    "maven": {
+      "available": false,
+      "version_output": "[WinError 2] The system cannot find the file specified"
+    },
+    "winutils": {
+      "available": false,
+      "binary_locations": []
+    },
+    "wsl": {
+      "status_output": "",
+      "distros_output": "",
+      "available": false
+    },
+    "docker": {
+      "installed": true,
+      "version_output": "Docker version 29.7.2, build a7dcaa6",
+      "daemon_running": false
+    },
+    "processes": {
+      "jps_output": "11996 Jps",
+      "java_processes": ""
+    }
+  }
+}

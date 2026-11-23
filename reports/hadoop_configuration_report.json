@@ -1,0 +1,68 @@
+{
+  "status": "CONFIGURED_AND_VALIDATED",
+  "phase": "Phase 2.4",
+  "timestamp_utc": "2026-11-23T17:35:00Z",
+  "java_configuration": {
+    "java_home": "/usr/lib/jvm/java-11-openjdk-amd64",
+    "runtime_version": "OpenJDK 11.0.33",
+    "status": "VALIDATED"
+  },
+  "core_site": {
+    "fs_defaultFS": "hdfs://localhost:9000",
+    "hadoop_tmp_dir": "/var/hadoop/tmp"
+  },
+  "hdfs_site": {
+    "dfs_replication": 1,
+    "dfs_namenode_name_dir": "file:///var/hadoop/hdfs/namenode",
+    "dfs_datanode_data_dir": "file:///var/hadoop/hdfs/datanode",
+    "dfs_permissions_enabled": false
+  },
+  "mapred_site": {
+    "mapreduce_framework_name": "local",
+    "execution_mode_description": "LocalJobRunner (in-process client execution engine against HDFS)",
+    "mapreduce_job_maps": 2,
+    "mapreduce_job_reduces": 1
+  },
+  "heap_limits": {
+    "hadoop_heapsize_max": "1024m",
+    "namenode_heap": "-Xms256m -Xmx512m",
+    "datanode_heap": "-Xms256m -Xmx512m",
+    "total_daemon_ram_mb": 1024
+  },
+  "storage_directories": [
+    {
+      "path": "/var/hadoop/hdfs/namenode",
+      "permissions": "drwx------",
+      "owner": "dminmlops:dminmlops"
+    },
+    {
+      "path": "/var/hadoop/hdfs/datanode",
+      "permissions": "drwx------",
+      "owner": "dminmlops:dminmlops"
+    },
+    {
+      "path": "/var/hadoop/tmp",
+      "permissions": "drwxrwxrwx",
+      "owner": "dminmlops:dminmlops"
+    },
+    {
+      "path": "/var/log/hadoop",
+      "permissions": "drwxr-xr-x",
+      "owner": "dminmlops:dminmlops"
+    }
+  ],
+  "validation_outputs": {
+    "hadoop_conftest": "/opt/hadoop/etc/hadoop/hadoop-policy.xml: valid\n/opt/hadoop/etc/hadoop/capacity-scheduler.xml: valid\n/opt/hadoop/etc/hadoop/httpfs-site.xml: valid\n/opt/hadoop/etc/hadoop/hdfs-rbf-site.xml: valid\n/opt/hadoop/etc/hadoop/core-site.xml: valid\n/opt/hadoop/etc/hadoop/kms-site.xml: valid\n/opt/hadoop/etc/hadoop/mapred-site.xml: valid\n/opt/hadoop/etc/hadoop/hdfs-site.xml: valid\n/opt/hadoop/etc/hadoop/yarn-site.xml: valid\n/opt/hadoop/etc/hadoop/kms-acls.xml: valid\nOK",
+    "hdfs_getconf": "fs.defaultFS: hdfs://localhost:9000\ndfs.replication: 1\ndfs.namenode.name.dir: file:///var/hadoop/hdfs/namenode\ndfs.datanode.data.dir: file:///var/hadoop/hdfs/datanode",
+    "mapred_grep": "<name>mapreduce.framework.name</name>\n        <value>local</value>\n        <description>Execution framework set to LocalJobRunner (in-process MapReduce engine reading/writing directly from HDFS)</description>",
+    "storage_dirs_ls": "drwxr-xr-x 4 dminmlops dminmlops 4096 Nov 23 17:25 /var/hadoop\ndrwxr-xr-x 4 dminmlops dminmlops 4096 Nov 23 17:25 /var/hadoop/hdfs\ndrwx------ 2 dminmlops dminmlops 4096 Nov 23 17:25 /var/hadoop/hdfs/datanode\ndrwx------ 2 dminmlops dminmlops 4096 Nov 23 17:25 /var/hadoop/hdfs/namenode\ndrwxrwxrwx 2 dminmlops dminmlops 4096 Nov 23 17:25 /var/hadoop/tmp\ndrwxr-xr-x 2 dminmlops dminmlops 4096 Nov 23 17:25 /var/log/hadoop",
+    "hadoop_env_vars": "JAVA_HOME:              /usr/lib/jvm/java-11-openjdk-amd64\nHADOOP_HEAPSIZE_MAX:    1024m\nHADOOP_NAMENODE_OPTS:   -Xms256m -Xmx512m \nHADOOP_DATANODE_OPTS:   -Xms256m -Xmx512m \nHADOOP_LOG_DIR:         /var/log/hadoop"
+  },
+  "errors_and_resolutions": [
+    {
+      "issue": "Previously missing bin/mapred and bin/yarn executable wrapper scripts (saved as 404 text in legacy environment).",
+      "resolution": "Restored authentic Apache Hadoop 3.4.0 release scripts from official Apache release repository and verified execution via `mapred` and `yarn version`."
+    }
+  ],
+  "readiness": "READY FOR HDFS FORMATTING APPROVAL"
+}

@@ -1,0 +1,65 @@
+{
+  "project": "Large-Scale Telecommunication Data Processing and Performance Monitoring Using MapReduce",
+  "timestamp": "2026-11-23T17:48:13.919745+00:00",
+  "hdfs_status": "INITIALIZED_AND_HEALTHY",
+  "environment": {
+    "os": "Ubuntu 24.04.3 LTS (WSL2)",
+    "hadoop_version": "Apache Hadoop 3.4.0",
+    "java_version": "OpenJDK 11.0.33",
+    "filesystem_uri": "hdfs://localhost:9000"
+  },
+  "daemons": {
+    "jps_processes": [
+      "786 Jps",
+      "412 NameNode",
+      "413 DataNode"
+    ],
+    "namenode_service_status": [
+      "\u25cf hadoop-namenode.service - Apache Hadoop HDFS NameNode",
+      "     Loaded: loaded (/etc/systemd/system/hadoop-namenode.service; disabled; preset: enabled)",
+      "     Active: active (running) since Mon 2026-11-23 17:47:49 UTC; 23s ago",
+      "   Main PID: 412 (java)",
+      "      Tasks: 77 (limit: 9341)"
+    ],
+    "datanode_service_status": [
+      "\u25cf hadoop-datanode.service - Apache Hadoop HDFS DataNode",
+      "     Loaded: loaded (/etc/systemd/system/hadoop-datanode.service; disabled; preset: enabled)",
+      "     Active: active (running) since Mon 2026-11-23 17:47:49 UTC; 23s ago",
+      "   Main PID: 413 (java)",
+      "      Tasks: 73 (limit: 9341)"
+    ]
+  },
+  "cluster_report": {
+    "live_nodes": 1,
+    "configured_capacity_gb": 1006.85,
+    "dfs_remaining_gb": 949.57,
+    "raw_dfsadmin_report": "Configured Capacity: 1081101176832 (1006.85 GB)\nPresent Capacity: 1019588579328 (949.57 GB)\nDFS Remaining: 1019588554752 (949.57 GB)\nDFS Used: 24576 (24 KB)\nDFS Used%: 0.00%\nReplicated Blocks:\n\tUnder replicated blocks: 0\n\tBlocks with corrupt replicas: 0\n\tMissing blocks: 0\n\tMissing blocks (with replication factor 1): 0\n\tLow redundancy blocks with highest priority to recover: 0\n\tPending deletion blocks: 0\nErasure Coded Block Groups: \n\tLow redundancy block groups: 0\n\tBlock groups with corrupt internal blocks: 0\n\tMissing block groups: 0\n\tLow redundancy blocks with highest priority to recover: 0\n\tPending deletion blocks: 0\n\n-------------------------------------------------\nLive datanodes (1):\n\nName: 127.0.0.1:9866 (localhost)\nHostname: LAPTOP-R0TENJC5.localdomain\nDecommission Status : Normal\nConfigured Capacity: 1081101176832 (1006.85 GB)\nDFS Used: 24576 (24 KB)\nNon DFS Used: 6520242176 (6.07 GB)\nDFS Remaining: 1019588554752 (949.57 GB)\nDFS Used%: 0.00%\nDFS Remaining%: 94.31%\nConfigured Cache Capacity: 0 (0 B)\nCache Used: 0 (0 B)\nCache Remaining: 0 (0 B)\nCache Used%: 100.00%\nCache Remaining%: 0.00%\nXceivers: 0\nLast contact: Mon Nov 23 17:48:05 UTC 2026\nLast Block Report: Mon Nov 23 17:47:56 UTC 2026\nNum of Blocks: 0"
+  },
+  "hdfs_structure": {
+    "root": [
+      "Found 1 items",
+      "drwxr-xr-x   - dminmlops supergroup          0 2026-11-23 17:45 /telecom"
+    ],
+    "telecom_tree": [
+      "drwxr-xr-x   - dminmlops supergroup          0 2026-11-23 17:45 /telecom/data",
+      "drwxr-xr-x   - dminmlops supergroup          0 2026-11-23 17:45 /telecom/data/processed",
+      "drwxr-xr-x   - dminmlops supergroup          0 2026-11-23 17:45 /telecom/data/raw",
+      "drwxr-xr-x   - dminmlops supergroup          0 2026-11-23 17:45 /telecom/output",
+      "drwxr-xr-x   - dminmlops supergroup          0 2026-11-23 17:45 /telecom/results"
+    ]
+  },
+  "metadata_verification": {
+    "cluster_id": "CID-2a46756a-6e64-4cac-9e78-c6d38b2d925f",
+    "blockpool_id": "BP-620093738-127.0.1.1-1795455466376",
+    "namenode_version_file": "#Mon Nov 23 17:37:46 UTC 2026\nnamespaceID=1423937088\nblockpoolID=BP-620093738-127.0.1.1-1795455466376\nstorageType=NAME_NODE\ncTime=1795455466376\nclusterID=CID-2a46756a-6e64-4cac-9e78-c6d38b2d925f\nlayoutVersion=-67",
+    "datanode_blockpool_version": "#Mon Nov 23 17:47:55 UTC 2026\nnamespaceID=1423937088\nblockpoolID=BP-620093738-127.0.1.1-1795455466376\ncTime=1795455466376\nlayoutVersion=-57",
+    "fsimage_listing": "total 4120\ndrwx------ 2 dminmlops dminmlops    4096 Nov 23 17:47 .\ndrwx------ 3 dminmlops dminmlops    4096 Nov 23 17:47 ..\n-rw-r--r-- 1 dminmlops dminmlops     213 Nov 23 17:37 VERSION\n-rw-r--r-- 1 dminmlops dminmlops 1048576 Nov 23 17:37 edits_0000000000000000001-0000000000000000001\n-rw-r--r-- 1 dminmlops dminmlops 1048576 Nov 23 17:39 edits_0000000000000000002-0000000000000000002\n-rw-r--r-- 1 dminmlops dminmlops 1048576 Nov 23 17:45 edits_0000000000000000003-0000000000000000009\n-rw-r--r-- 1 dminmlops dminmlops 1048576 Nov 23 17:47 edits_inprogress_0000000000000000010\n-rw-r--r-- 1 dminmlops dminmlops     404 Nov 23 17:37 fsimage_0000000000000000000\n-rw-r--r-- 1 dminmlops dminmlops      62 Nov 23 17:37 fsimage_0000000000000000000.md5\n-rw-r--r-- 1 dminmlops dminmlops       3 Nov 23 17:47 seen_txid"
+  },
+  "listening_ports": [
+    "tcp   LISTEN 0      256         127.0.0.1:9000       0.0.0.0:*    users:((\"java\",pid=412,fd=362))",
+    "tcp   LISTEN 0      500           0.0.0.0:9870       0.0.0.0:*    users:((\"java\",pid=412,fd=333))",
+    "tcp   LISTEN 0      256           0.0.0.0:9867       0.0.0.0:*    users:((\"java\",pid=413,fd=535))",
+    "tcp   LISTEN 0      256           0.0.0.0:9866       0.0.0.0:*    users:((\"java\",pid=413,fd=334))",
+    "tcp   LISTEN 0      4096          0.0.0.0:9864       0.0.0.0:*    users:((\"java\",pid=413,fd=534))"
+  ]
+}
