@@ -32,7 +32,11 @@ env/
 ENV/
 
 # Streamlit Local Runtime
-.streamlit/
+.streamlit/*
+!.streamlit/config.toml
+
+# Firebase CLI Cache
+.firebase/
 
 # Operating System & IDE Artifacts
 .DS_Store

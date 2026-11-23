@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telecom MapReduce & Big Data Analytics</title>
+  <meta name="description" content="Large-Scale Telecommunication Data Processing and Performance Monitoring Using Hadoop MapReduce.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0a0e17;
+      --bg-card: rgba(18, 26, 43, 0.85);
+      --bg-card-hover: rgba(28, 39, 64, 0.95);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(0, 212, 255, 0.3);
+      --text-main: #f0f4fc;
+      --text-muted: #8da2c0;
+      --accent-cyan: #00d4ff;
+      --accent-blue: #2563eb;
+      --accent-purple: #8b5cf6;
+      --accent-emerald: #10b981;
+      --accent-amber: #f59e0b;
+      --shadow-glow: 0 0 35px rgba(0, 212, 255, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(37, 99, 235, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 85% 60%, rgba(0, 212, 255, 0.1) 0%, transparent 45%),
+        radial-gradient(circle at 50% 85%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* HEADER & HERO */
+    header {
+      padding: 30px 0 20px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .brand-badge {
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .hero {
+      padding: 70px 0 50px;
+      text-align: center;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(0, 212, 255, 0.08);
+      border: 1px solid var(--border-accent);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--accent-cyan);
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .pill-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-emerald);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-emerald);
+    }
+
+    h1.hero-title {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #ffffff 40%, var(--accent-cyan) 85%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p.hero-subtitle {
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      color: var(--text-muted);
+      max-width: 850px;
+      margin: 0 auto 36px;
+      font-weight: 400;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0284c7, #00d4ff);
+      color: #051024;
+      box-shadow: 0 4px 20px rgba(0, 212, 255, 0.35);
+      border: none;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(0, 212, 255, 0.55);
+      background: linear-gradient(135deg, #0396e6, #38e1ff);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    /* KPI METRIC CARDS */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-bottom: 60px;
+    }
+
+    .metric-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 24px;
+      text-align: left;
+      backdrop-filter: blur(12px);
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .metric-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .metric-card:hover::before {
+      opacity: 1;
+    }
+
+    .metric-label {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .metric-value {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #fff;
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .metric-sub {
+      font-size: 0.85rem;
+      color: var(--accent-emerald);
+      font-weight: 500;
+    }
+
+    /* SECTION STYLES */
+    section {
+      padding: 50px 0;
+    }
+
+    .section-title {
+      font-size: 1.85rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 32px;
+      max-width: 800px;
+    }
+
+    /* ARCHITECTURE PIPELINE */
+    .pipeline-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 40px;
+      backdrop-filter: blur(10px);
+    }
+
+    .pipeline-flow {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      position: relative;
+    }
+
+    .flow-step {
+      background: rgba(10, 14, 23, 0.6);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .flow-step:hover {
+      border-color: var(--accent-cyan);
+    }
+
+    .step-number {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
+      background: rgba(0, 212, 255, 0.15);
+      color: var(--accent-cyan);
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .step-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .step-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* TECH STACK CHIPS */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+    }
+
+    .tech-chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .tech-chip:hover {
+      border-color: var(--accent-cyan);
+      transform: translateY(-2px);
+    }
+
+    .tech-name {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #fff;
+    }
+
+    .tech-role {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* LIMITATIONS & DISCLOSURE */
+    .disclosure-box {
+      background: rgba(245, 158, 11, 0.05);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 14px;
+      padding: 24px;
+      margin: 40px 0;
+    }
+
+    .disclosure-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--accent-amber);
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+    }
+
+    .disclosure-list {
+      list-style-type: disc;
+      padding-left: 24px;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 40px 0 30px;
+      }
+      .cta-group {
+        flex-direction: column;
+        width: 100%;
+      }
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-bar">
+      <a href="#" class="brand">
+        <span>📡 Telecom BigData</span>
+        <span class="brand-badge">Hadoop MapReduce</span>
+      </a>
+      <div class="nav-links">
+        <a href="https://github.com/yukthashreegr15ganesh-hub/telecom-mapreduce-bigdata" target="_blank" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.85rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="pill">
+        <span class="pill-dot"></span>
+        Production MapReduce Pipeline & Verified Analytics
+      </div>
+      <h1 class="hero-title">Telecom MapReduce &<br>Big Data Analytics</h1>
+      <p class="hero-subtitle">
+        Large-Scale Telecommunication Data Processing and Performance Monitoring Using Hadoop MapReduce across 4.84 Million Call Detail Records.
+      </p>
+
+      <div class="cta-group">
+        <a href="https://telecom-mapreduce-bigdata.streamlit.app" target="_blank" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3l14 9-14 9V3z"/></svg>
+          Open Live Dashboard
+        </a>
+        <a href="https://github.com/yukthashreegr15ganesh-hub/telecom-mapreduce-bigdata" target="_blank" class="btn btn-secondary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          View GitHub Repository
+        </a>
+      </div>
+
+      <!-- ACTUAL MEASURED BENCHMARK METRICS -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-label">Total Ingested Records</div>
+          <div class="metric-value">4,842,625</div>
+          <div class="metric-sub">✓ 100% Validated (0.00% Loss)</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">MapReduce Throughput</div>
+          <div class="metric-value">302,565</div>
+          <div class="metric-sub">⚡ Records / Second (16.01s job)</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Mobile Internet Share</div>
+          <div class="metric-value">86.16%</div>
+          <div class="metric-sub">🌐 82.48M Normalized Units</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Spatial Gini Coefficient</div>
+          <div class="metric-value">0.5952</div>
+          <div class="metric-sub">🗼 Top 20% cells carry 63.1% load</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE OVERVIEW -->
+    <section>
+      <h2 class="section-title">🏗️ End-to-End System Architecture</h2>
+      <p class="section-desc">
+        A reproducible, fault-tolerant distributed pipeline running over authentic Milan Call Detail Records:
+      </p>
+      <div class="pipeline-card">
+        <div class="pipeline-flow">
+          <div class="flow-step">
+            <span class="step-number">1</span>
+            <div class="step-title">Data Ingestion</div>
+            <div class="step-desc">Harvard Dataverse (DOI: 10.7910/DVN/EGZHFV). 322.87 MB raw CDR dataset with MD5 verification.</div>
+          </div>
+          <div class="flow-step">
+            <span class="step-number">2</span>
+            <div class="step-title">HDFS Storage Layer</div>
+            <div class="step-desc">Distributed block storage on Apache Hadoop 3.4.0 HDFS managed via persistent Linux systemd daemons.</div>
+          </div>
+          <div class="flow-step">
+            <span class="step-number">3</span>
+            <div class="step-title">Hadoop MapReduce</div>
+            <div class="step-desc">Streaming Python MapReduce with In-Mapper Combining. Aggregates cells, intervals, and international codes.</div>
+          </div>
+          <div class="flow-step">
+            <span class="step-number">4</span>
+            <div class="step-title">Analytics & Anomaly Engine</div>
+            <div class="step-desc">Spatial Gini index, Pareto analysis, and non-parametric Median & MAD anomaly detection models.</div>
+          </div>
+          <div class="flow-step">
+            <span class="step-number">5</span>
+            <div class="step-title">Streamlit Dashboard</div>
+            <div class="step-desc">Low-latency (8.28 ms) interactive telemetry deployed on Streamlit Community Cloud.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DATASET DETAILS -->
+    <section>
+      <h2 class="section-title">📑 Dataset Provenance & Schema</h2>
+      <p class="section-desc">
+        Originating from Telecom Italia's Open Big Data initiative, capturing metropolitan communication activity across the Milan urban area.
+      </p>
+      <div class="metrics-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="metric-card">
+          <div class="metric-label">Dataset Provenance</div>
+          <div style="font-weight: 600; color: #fff; margin-bottom: 8px;">Telecom Italia Milan Grid</div>
+          <div style="font-size: 0.88rem; color: var(--text-muted);">Harvard Dataverse Repository<br>Collection Period: Nov 1, 2013 (Day 1)</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Spatial & Temporal Scope</div>
+          <div style="font-weight: 600; color: #fff; margin-bottom: 8px;">10,000 Cells × 144 Intervals</div>
+          <div style="font-size: 0.88rem; color: var(--text-muted);">10-minute non-overlapping intervals<br>246 sovereign calling country codes</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">8-Field Schema</div>
+          <div style="font-weight: 600; color: #fff; margin-bottom: 8px;">cell_id, timestamp, country_code</div>
+          <div style="font-size: 0.88rem; color: var(--text-muted);">sms_in, sms_out, call_in, call_out, internet_traffic (tab-separated)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNOLOGY STACK -->
+    <section>
+      <h2 class="section-title">⚙️ Production Technology Stack</h2>
+      <p class="section-desc">Engineered using proven open-source distributed frameworks and modern cloud tools:</p>
+      <div class="tech-grid">
+        <div class="tech-chip">
+          <div class="tech-name">Apache Hadoop 3.4.0</div>
+          <div class="tech-role">Distributed HDFS & MapReduce Framework</div>
+        </div>
+        <div class="tech-chip">
+          <div class="tech-name">Hadoop Streaming</div>
+          <div class="tech-role">Standard Unix I/O Interprocess Pipe</div>
+        </div>
+        <div class="tech-chip">
+          <div class="tech-name">Python 3.12 / 3.10</div>
+          <div class="tech-role">Mapper, Reducer, Profiler & MAD Engine</div>
+        </div>
+        <div class="tech-chip">
+          <div class="tech-name">Streamlit 1.28+</div>
+          <div class="tech-role">Interactive Web Telemetry & Visualization</div>
+        </div>
+        <div class="tech-chip">
+          <div class="tech-name">Pandas 2.0+</div>
+          <div class="tech-role">Arrow Caching & Tabular Reconciliation</div>
+        </div>
+        <div class="tech-chip">
+          <div class="tech-name">Firebase Hosting</div>
+          <div class="tech-role">Global CDN Edge Landing Page (Spark Plan)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACADEMIC TRANSPARENCY & LIMITATIONS -->
+    <div class="disclosure-box">
+      <div class="disclosure-header">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0zM12 9v4m0 4h.01"/></svg>
+        Architectural Disclosure & Academic Integrity
+      </div>
+      <ul class="disclosure-list">
+        <li><strong>Single-Node Execution:</strong> The MapReduce aggregation was executed in a pseudo-distributed single-node host via Hadoop <code>LocalJobRunner</code> against persistent HDFS block storage. It is not a multi-node cluster.</li>
+        <li><strong>Dataset Temporal Scope:</strong> Consistent with project parameters, this pipeline processes Day 1 (<code>2013-11-01</code>, containing 4,842,625 records). The remaining 61 daily files were not ingested.</li>
+        <li><strong>Dimensionless Traffic Indices:</strong> Volume values represent proportional density indices normalized by Telecom Italia to preserve commercial secrecy and subscriber confidentiality.</li>
+        <li><strong>Statistical Anomaly Scope:</strong> The 56 detected anomalies reflect statistical variance in CDR traffic volume (surges, commuter spikes, transit clusters) and do not represent confirmed physical telecommunications hardware failures.</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p style="margin-bottom: 8px;">
+        Telecom MapReduce & Big Data Analytics | Open Data Commons Open Database License (ODbL v1.0)
+      </p>
+      <p>
+        Repository: <a href="https://github.com/yukthashreegr15ganesh-hub/telecom-mapreduce-bigdata" target="_blank">yukthashreegr15ganesh-hub/telecom-mapreduce-bigdata</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
